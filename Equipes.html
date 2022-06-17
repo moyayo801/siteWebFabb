@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo3.png">
+    <title>Gestion F.A.B.B - Équipes</title>
+
+    <!-- Bootstrap core CSS -->
+    
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Additional CSS Files -->
+
+ 
+  
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">  
+ 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> 
+    <style>
+i{
+    position: absolute;
+    top: 69%;
+    right: 86%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    color: #ff511a;
+    transition: .2s;
+    padding-top: 15%;
+}
+.boxx:hover i{
+  
+    opacity: 0;
+    z-index: -1;
+}
+.labs{
+        display: inline-block;
+        width: 100%;
+      }
+    </style>
+
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          <img src="assets/images/logo3.png" alt="">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="tables.html" class="active">Accueil</a></li>
+                          <li class="has-sub">
+                              <a href="javascript:void(0)">Menu</a>
+                              <ul class="sub-menu">
+                                <li><a href="Joueurs.html">Joueurs</a></li>
+                                  <li><a href="Matchs.html">Matchs</a></li>
+                                  <li><a href="News.html">Actualités</a></li>
+                                  <li><a href="imgVid.html">Médias</a></li>
+                                  <li><a href="entraineur.html">Entraîneurs</a></li>
+                                  <li><a href="equipeNat.html">Sélection nationale</a></li>
+                              </ul>
+                          </li>
+                          <li><a style="visibility: hidden;" href="contact-us.html">Contacts</a></li> 
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+
+  <!-- ***** Main Banner Area End ***** -->
+
+
+
+ 
+
+   <section class="about-us" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 offset-lg-3">
+          <div class="section-heading">
+            <h6>Super-Division Nationale 1</h6>
+            <h4>Équipes</h4>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="naccs">
+            <div class="tabs">
+              <div class="row">
+   
+                <div class="col-lg-12">
+                  <div class="menu">
+                    <div class="active gradient-border"><span>Liste de équipes</span></div>
+                    <div class="gradient-border"><span>Classement en Championnat</span></div>
+                    <div class="gradient-border"><span>Modifier</span></div>
+                    <div class="gradient-border"><span>Ajouter</span></div>
+                    <div class="gradient-border"><span>Photos</span></div>
+                  </div>
+                </div>
+              </div>
+                <div class="col-lg-12">
+                  
+
+                  <ul class="nacc">        
+               
+                    <li class="active">
+    
+                      <div>
+                        <div class="main-list">
+                          <div class="col-lg-4">
+                        
+                            <div class="boxx">
+                             <div> <select id="searchbox">
+                               <option value="Club">Club</option>
+                               <option value="nom">Nom</option>
+                               <option value="President">Président</option>
+                             </select></div>
+                               <form name="search">
+                                   <input type="text" class="input-search" id="search">
+                               </form>
+                                   <i class="fas fa-search"></i>
+                           </div>
+                         
+                          
+                         </div>
+                         <div class="col-lg-12">
+                             <span>  
+                                 <div class="table-responsive" style="text-align: center; font-size: 15.5px;">
+                            <table id="tabel_CoverTrans_details" class="table table-bordered  table-hover js-basic-example dataTable " >
+                            <thead class="thead-dark" style="font-weight: bold;">
+                                <th>#</th>
+                                <th>Abr.</th> 
+                                <th>Nom complet de l'équipe</th>
+                                <th>E-mail</th>
+                                <th>Coach en chef</th>
+                                <th>Adjoint-Coach</th>
+                                <th>Président</th>
+                                <th>Lieu</th>
+
+                          
+                            
+                            </thead>
+                            <span>
+                                  <tbody id="tbody1">
+                            </tbody></span>
+                          
+                          </table>
+                        </div>
+                    </span></div>
+                          
+                       
+                        </div>
+                    </li>
+
+                    <li>
+                      <div>
+                        <div class="main-list">
+                          <div class="col-lg-4">
+                        
+                            <div class="boxx">
+                             <div> <select id="searchboxx">
+                               <option value="Club">Club</option>
+                              <option value="nom">Nom</option>
+                               
+                           
+                             </select></div>
+                               <form name="search">
+                                   <input type="text" class="input-search" id="searchx">
+                               </form>
+                                   <i class="fas fa-search"></i>
+                           </div>
+                         
+                          
+                         </div>
+                         <div class="col-lg-12"> <span> 
+                          <div class="table-responsive" style="text-align: center; font-size: 15.5px;">
+                          <table id="tabel_CoverTrans_details" class="table table-bordered  table-hover js-basic-example dataTable " >
+                          <thead class="thead-dark" style="font-weight: bold;">
+                              <th>#</th>
+                              <th>Abr.</th> 
+                              <th>Nom complet de l'equipe</th>
+                              <th>PTS</th>
+                              <th>J</th>
+                              <th>Victoires</th>
+                              <th>Défaites</th>
+                              <th>%</th>
+                              <th>PP</th>
+                              <th>PC</th>
+                              <th>PA</th>
+                        
+                          
+                          </thead>
+                          <div class="list-item last-item">
+                              <tbody id="tbody3">
+                        </tbody></div>
+                        </table>
+                      </div> </span></div>
+                           
+                            
+                        </div>
+                    </li>
+
+                    <li>
+                      <div>
+                        <div class="main-list">
+                          <div class="col-lg-4">
+                        
+                            <div class="boxx">
+                             <div> <select id="searchboxxx">
+                               <option value="Club">Club</option>
+                                <option value="nom">Nom</option>
+                               <option value="President">Président</option>
+                              
+                          
+                             </select></div>
+                               <form name="searchxx">
+                                   <input type="text" class="input-search" id="searchxx">
+                               </form>
+                                   <i class="fas fa-search"></i>
+                           </div>
+                         
+                          
+                         </div>
+                         <div class="col-lg-12"> <span> 
+                          <div class="table-responsive" style="text-align: center; font-size: 15.5px;">
+                          <table id="tabel_CoverTrans_details" class="table table-bordered  table-hover js-basic-example dataTable " >
+                          <thead class="thead-dark" style="font-weight: bold;">
+                              <th>#</th>
+                              <th>Abr.</th> 
+                              <th>Nom complet de l'équipe</th>
+                              <th>E-mail</th>
+
+                              <th>Coach en chef</th>
+                              <th>Adjoint-Coach</th>
+                              
+                              <th>Président</th>
+                              <th>Lieu</th>
+                        
+                          
+                          </thead>
+                          <div class="list-item last-item">
+                              <tbody id="tbody2">
+                        </tbody></div>
+                        </table>
+                      </div> </span></div>
+                           
+                            
+                        </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="main-list">
+                            <span> <div id="calculate" >
+                                <div class="row">
+                                  <div class="col-lg-6">
+                                    <fieldset>
+                                      <label for="clubbox" style="color: black;">Club</label>
+                                      <input type="text"  id="club">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <fieldset>
+                                      <label for="nombox" style="color: black;" >Nom complet de l'équipe</label>
+                                      <input type="text"  id="nom">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="presidentbox" style="color: black;" >Président</label>
+                                      <input type="text"  id="president" >
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-8">
+                                    <fieldset>
+                                      <label for="fondbox" style="color: black;" >E-mail</label>
+                                      <input type="text" id="fond" >
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="villebox" style="color: black;" >Lieu</label>
+                                      <input type="text" id="ville" >
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <div style="margin-left: 40%;" class="orange-button"><button id="selbtn" >Sélectionner une image</button></div>
+                                      
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <div class="image-upload-wrap">
+                                        <img id="myimg">
+                                      </div>
+                                       <label id="upprogress" style="color: #ff511a;"></label>
+                                    </fieldset>
+                                  </div>
+
+                                  <div class="col-lg-6">
+                                    <fieldset>
+                                      <label for="imagesbox" style="color: black;">Titre de l'image</label>
+                                      <input type="text" id="namebox">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <fieldset>
+                                    <label style="color: blue; margin-top: 18%;" id="extlab"></label>
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <button id="insert" class="orange-button">Enregistrer</button>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                            </div></span>
+                           
+                        </div>
+                      
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="main-list">
+                            <span> <div id="calculate" >
+                                <div class="row">
+                             
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="domicilem" style="color: black;">ID</label>
+                                      <select  class="form-select" aria-label="Default select example" id="domicilem" >
+                                        <option selected value="Choisi">Choisir</option>
+                                    </select>
+                                    </fieldset>
+                                  </div>
+                          
+                          
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <div style="margin-left: 40%;" class="orange-button"><button id="selbtn1" >Sélectionner une image</button></div>
+                                      
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <div class="image-upload-wrap">
+                                        <img id="myimg1">
+                                      </div>
+                                       <label id="upprogress1" style="color: #ff511a;"></label>
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <div style="margin-left: 40%;" class="green-button"><button id="upbtn1">Enregistrer l'image</button></div>
+                                      
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <fieldset>
+                                      <label for="imagesbox" style="color: black;">Description</label>
+                                      <input type="text" id="namebox1">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <fieldset>
+                                    <label style="color: blue; margin-top: 18%;" id="extlab1"></label>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                            </div></span>
+                           
+                        </div>
+                      
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+   <footer>
+    <div class="container">
+      <div class="row">
+    
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Remplir le formulaire</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         
+   <label class="labs">Club :</label>                 <input id="clubbox" type="text" class="labs"></input> <br><br>     
+   <label class="labs">E-mail :</label>  <input id="fondbox" type="text" class="labs"></input> <br><br>
+   <label class="labs">Équipe :</label>              <input id="nombox" type="text" class="labs"></input> <br><br>
+     <label class="labs">Président :</label>        <input id="presidentbox" type="text" class="labs"></input> <br><br>
+     <label class="labs">Lieu :</label>            <input id="villebox" type="text" class="labs"></input> <br><br> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary" id="save">Enregistrer les modifications</button>
+          <button type="button" class="btn btn-danger" id="drop">Supprimer</button>
+    
+          <input type="hidden" name="index" id="index">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Modal 2-->
+  <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Remplir le formulaire</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         
+   <label class="labs">Club :</label>                 <input id="clubbox2" type="text" class="labs" disabled></input> <br><br>    
+
+
+   <label class="labs">Nombre de défaites :  </label>          <input id="defaitesbox" type="number" class="labs"></input> <br><br>
+   <label class="labs">Nombre de victoires :</label>       <input id="victoiresbox" type="number" class="labs"></input> <br><br>
+   <label class="labs"> PP :  </label>          <input id="ppbox" type="number" class="labs"></input> <br><br>
+   <label class="labs"> PA :  </label>          <input id="pabox" type="number" class="labs"></input> <br><br>
+   <label class="labs"> PC :  </label>          <input id="pcbox" type="number" class="labs"></input> <br><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary" id="savecl">Enregistrer les modifications</button>
+    
+          <input type="hidden" name="index" id="indexx">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/swiper.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+      var interleaveOffset = 0.5;
+
+    var swiperOptions = {
+      loop: true,
+      speed: 1000,
+      grabCursor: true,
+      watchSlidesProgress: true,
+      mousewheelControl: true,
+      keyboardControl: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        progress: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            var slideProgress = swiper.slides[i].progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            swiper.slides[i].querySelector(".slide-inner").style.transform =
+              "translate3d(" + innerTranslate + "px, 0, 0)";
+          }      
+        },
+        touchStart: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = "";
+          }
+        },
+        setTransition: function(speed) {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = speed + "ms";
+            swiper.slides[i].querySelector(".slide-inner").style.transition =
+              speed + "ms";
+          }
+        }
+      }
+    };
+
+    var swiper = new Swiper(".swiper-container", swiperOptions);
+  </script>
+
+
+<script type="module">
+  
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+ 
+   const firebaseConfig = {
+     apiKey: "AIzaSyAVpkaI_1x5d4ItI4kaiN2xOxPmXH_wjnE",
+     authDomain: "yatosama-demo.firebaseapp.com",
+     databaseURL: "https://yatosama-demo-default-rtdb.europe-west1.firebasedatabase.app",
+     projectId: "yatosama-demo",
+     storageBucket: "yatosama-demo.appspot.com",
+     messagingSenderId: "440036821979",
+     appId: "1:440036821979:web:0436e491278d04d78375fe",
+     measurementId: "G-4XHSQ4HZXZ"
+   };
+ 
+   // Initialize Firebase
+   const app = initializeApp(firebaseConfig);
+   const analytics = getAnalytics(app);
+ 
+   import{
+      Timestamp, getFirestore, doc, onSnapshot, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField, query, where , getDocs, orderBy, limit
+   }
+   from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+   import{
+        getStorage, ref as sRef, uploadBytesResumable, getDownloadURL  }
+   from "https://www.gstatic.com/firebasejs/9.6.8/firebase-storage.js";
+ 
+  const db = getFirestore();
+ //------------------------------------------------//
+ 
+ 
+ var clubnom = document.getElementById('clubbox');
+ var clubcl = document.getElementById('clubbox2');
+ var fond = document.getElementById('fondbox');
+ var defaites = document.getElementById('defaitesbox');
+ var entraineur = document.getElementById('entraineurbox');
+ var nom = document.getElementById('nombox');
+ var president = document.getElementById('presidentbox');
+ var victoires = document.getElementById('victoiresbox');
+ var pp = document.getElementById('ppbox');
+ var pa = document.getElementById('pabox');
+ var pc = document.getElementById('pcbox');
+ var ville = document.getElementById('villebox');
+ var clubnom2 = document.getElementById('club');
+ var fond2 = document.getElementById('fond');
+ var entraineur2 = document.getElementById('entraineur');
+ var nom2 = document.getElementById('nom');
+ var president2 = document.getElementById('president');
+ var ville2 = document.getElementById('ville');
+ var save = document.getElementById('save');
+ var savecl = document.getElementById('savecl');
+ var drop = document.getElementById('drop');
+ var searchbox = document.getElementById('searchbox');
+ var domicilem = document.getElementById('domicilem');
+ const search = document.getElementById('search');
+ var searchboxx = document.getElementById('searchboxx');
+ const searchx = document.getElementById('searchx');
+ const searchxx = document.getElementById('searchxx');
+ var cle = document.getElementById('index');
+ var cle2 = document.getElementById('indexx');
+ var clubnames = [];
+ var clubclass = [];
+ const tBody = document.getElementById('tbody1');
+ const tBody2 = document.getElementById('tbody2');
+ const tBody3 = document.getElementById('tbody3');
+ const ref = collection(db, "Equipe");
+ var cmp =0;
+ var cmp1 =0;
+ var cmp2 =0;
+ var mca1;
+var osbba1;
+var  usma1;
+var ob1;
+var  crbdb1;
+var  wob1;
+var  cscdk1;
+var  irbba1;
+var csmbbo1;
+var uss1;
+var rcb1;
+var esc1;
+var asob1;
+var omsm1;
+var abs1;
+var nahd1;
+var pse1;
+var nbs1;
+var trad1;
+var usmb1;
+let ents =[];
+let cllubs =[];
+ flatpickr("#horairebox", {
+  enableTime: true,
+
+});
+flatpickr("#fondbox", {
+  
+
+});
+
+function dateFormat(inputDate, format) {
+      //parse the input date
+      const date = new Date(inputDate);
+
+      //extract the parts of the date
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
+
+      //replace the month
+      format = format.replace("MM", month.toString().padStart(2, "0"));
+
+      //replace the year
+      if (format.indexOf("yyyy") > -1) {
+        format = format.replace("yyyy", year.toString());
+      } else if (format.indexOf("yy") > -1) {
+        format = format.replace("yy", year.toString().substr(2, 2));
+      }
+
+      //replace the day
+      format = format.replace("dd", day.toString().padStart(2, "0"));
+
+      return format;
+    }
+    
+ //--------------------filling table-----------------------//
+ const select = await getDocs(collection(db, "Equipe"));
+
+select.forEach(
+  doc =>{
+    var el = document.createElement("option");
+        el.textContent =doc.data()["Club"] ;
+       el.value = doc.data()["Club"];
+       domicilem.appendChild(el); 
+
+
+  }, error => {
+      console.log(error.message);
+    }
+)
+ const q9 = collection(db, "Entraineur");
+ const querySnapshot9 = await getDocs(q9);
+ querySnapshot9.forEach(doc => {
+  let ent ={
+ "Club": `${doc.data()["Club"]}`,
+ "DN": `${doc.data()["DN"]}`,
+ "Fonction": `${doc.data()["Fonction"]}`,
+ "ID": `${doc.data()["ID"]}`,
+ "LN":`${doc.data()["LN"]}`,
+ "Nom":`${doc.data()["Nom"]}`,
+ "Prenom":`${doc.data()["Prenom"]}`,
+}
+ents.push(ent);
+   
+   }, error => {
+     console.log(error.message);
+   }
+   );
+
+   const y = collection(db, "Equipe");
+ const yy = await getDocs(y);
+ yy.forEach(doc => {
+  let club ={
+ "Club": `${doc.data()["Club"]}`,
+ "Nom": `${doc.data()["Nom"]}`,
+ "Président": `${doc.data()["Président"]}`,
+ "Défaites":`${doc.data()["Défaites"]}`,
+ "PA":`${doc.data()["PA"]}`,
+ "PC":`${doc.data()["PC"]}`,
+ "PP":`${doc.data()["PP"]}`,
+ "Victoires":`${doc.data()["Victoires"]}`,
+ "Salle":`${doc.data()["Salle"]}`,
+ "id":`${doc.id}`,
+ "email":`${doc.data()["Email"]}`
+}
+cllubs.push(club);
+   
+   }, error => {
+     console.log(error.message);
+   }
+   );
+
+
+
+
+ 
+ const q = collection(db, "Equipe");
+ const q2 = query(q, orderBy("Victoires","desc"));
+ const querySnapshot = await getDocs(q2);
+ var content = '';
+ //-------------------------table consulter---------------------------//
+ cllubs.forEach((doc,index) => {
+   var testRowIndex = clubnames.push([doc.Club,doc.email,doc.Défaites,doc.Nom,doc.Président,doc.Victoires,doc.Salle]) -1 ;
+    var row = document.createElement("tr");
+  
+   let clubac = ents.filter(ent => ent.Club === doc.Club && ent.Fonction === "AC");
+   let clubhc = ents.filter(ent => ent.Club === doc.Club && ent.Fonction === "HC");
+   
+
+   var cell1 = document.createElement("td");
+   var cell1Text = document.createTextNode((++cmp));
+   cell1.appendChild(cell1Text);
+ 
+   var cell2 = document.createElement("td");
+   var cell2Text = document.createTextNode(doc.Club);
+   cell2.appendChild(cell2Text);
+ 
+   var cell3 = document.createElement("td");
+   var cell3Text = document.createTextNode(doc.email);
+   cell3.appendChild(cell3Text);
+ 
+   var cell5 = document.createElement("td");
+   var cell5Text = document.createTextNode(`${clubac[0].Nom} ${clubac[0].Prenom}`);
+   cell5.appendChild(cell5Text);
+   var cell05 = document.createElement("td");
+   var cell05Text = document.createTextNode(`${clubhc[0].Nom} ${clubhc[0].Prenom}`);
+   cell05.appendChild(cell05Text);
+  
+   var cell6 = document.createElement("td");
+   var cell6Text = document.createTextNode(doc.Nom);
+   cell6.appendChild(cell6Text);
+ 
+   var cell7 = document.createElement("td");
+   var cell7Text = document.createTextNode(doc.Président);
+   cell7.appendChild(cell7Text);
+   var cell07 = document.createElement("td");
+   var cell07Text = document.createTextNode(doc.Salle);
+   cell07.appendChild(cell07Text);
+ 
+   row.appendChild(cell1);
+   
+   row.appendChild(cell2);
+   row.appendChild(cell6);
+   row.appendChild(cell3);
+   row.appendChild(cell05);
+   row.appendChild(cell5);
+  
+   row.appendChild(cell7);
+   row.appendChild(cell07);
+   
+
+ 
+   tBody.appendChild(row); 
+   
+   }, error => {
+     console.log(error.message);
+   }
+   );
+//--------------------------table modifier-----------------------------//
+cllubs.forEach((doc,index) => {
+   console.log(index);
+   var testRowIndex = clubnames.push([doc.Club,doc.email,doc.Défaites,doc.Nom,doc.Président,doc.Victoires,doc.Salle]) -1 ;
+   console.log(doc.Salle);
+   var row = document.createElement("tr");
+  
+   let clubac = ents.filter(ent => ent.Club === doc.Club && ent.Fonction === "AC");
+   let clubhc = ents.filter(ent => ent.Club === doc.Club && ent.Fonction === "HC");
+   
+
+   var cell1 = document.createElement("td");
+   var cell1Text = document.createTextNode((++cmp1));
+   cell1.appendChild(cell1Text);
+ 
+   var cell2 = document.createElement("td");
+   var cell2Text = document.createTextNode(doc.Club);
+   cell2.appendChild(cell2Text);
+ 
+   var cell3 = document.createElement("td");
+   var cell3Text = document.createTextNode(doc.email);
+   cell3.appendChild(cell3Text);
+ 
+   var cell5 = document.createElement("td");
+   var cell5Text = document.createTextNode(`${clubac[0].Nom} ${clubac[0].Prenom}`);
+   cell5.appendChild(cell5Text);
+   var cell05 = document.createElement("td");
+   var cell05Text = document.createTextNode(`${clubhc[0].Nom} ${clubhc[0].Prenom}`);
+   cell05.appendChild(cell05Text);
+  
+   var cell6 = document.createElement("td");
+   var cell6Text = document.createTextNode(doc.Nom);
+   cell6.appendChild(cell6Text);
+ 
+   var cell7 = document.createElement("td");
+   var cell7Text = document.createTextNode(doc.Président);
+   cell7.appendChild(cell7Text);
+   var cell07 = document.createElement("td");
+   var cell07Text = document.createTextNode(doc.Salle);
+   cell07.appendChild(cell07Text);
+ 
+ 
+   row.appendChild(cell1);
+   
+   row.appendChild(cell2);
+   row.appendChild(cell6);
+   row.appendChild(cell3);
+   row.appendChild(cell05);
+   row.appendChild(cell5);
+  
+   row.appendChild(cell7);
+   row.appendChild(cell07);
+   
+var update = document.createElement("button");
+ update.innerHTML = "Modifier";
+ update.onclick = function(){
+   Gett(testRowIndex,doc.id);
+ };
+ update.setAttribute("data-toggle", "modal");
+ update.setAttribute("type", "button");
+ update.setAttribute("data-target","#exampleModalCenter");
+ update.setAttribute("class","btn btn-primary btn-lg active btn-sm btn-rounded my-2 mx-2");
+
+ row.appendChild(update);
+
+
+
+   tBody2.appendChild(row);
+ 
+   
+   }, error => {
+     console.log(error.message);
+   }
+   );
+//-----------------------------------------------Consulter Classment------------------------------------//
+querySnapshot.forEach(doc => {
+   var testRowIndex1 = clubclass.push([doc.data()["Club"],doc.data()["Défaites"],doc.data()["Victoires"],doc.data()["PP"],doc.data()["PA"],doc.data()["PC"]]) -1 ;
+   var row = document.createElement("tr");
+ 
+   var cell1 = document.createElement("td");
+   var cell1Text = document.createTextNode((++cmp2));
+   cell1.appendChild(cell1Text);
+ 
+   var cell2 = document.createElement("td");
+   var cell2Text = document.createTextNode(doc.data()["Club"]);
+   cell2.appendChild(cell2Text);
+ 
+    var cell3 = document.createElement("td");
+   var cell3Text = document.createTextNode(doc.data()["Nom"]);
+   cell3.appendChild(cell3Text);
+
+   var cell4 = document.createElement("td");
+   var cell4Text = document.createTextNode((doc.data()["Victoires"]*2)+doc.data()["Défaites"]);
+   cell4.appendChild(cell4Text);
+
+   var cell5 = document.createElement("td");
+   var cell5Text = document.createTextNode((doc.data()["Victoires"])+doc.data()["Défaites"]);
+   cell5.appendChild(cell5Text);
+
+   var cell6 = document.createElement("td");
+   var cell6Text = document.createTextNode(doc.data()["Victoires"]);
+   cell6.appendChild(cell6Text);
+
+   var cell7 = document.createElement("td");
+   var cell7Text = document.createTextNode(doc.data()["Défaites"]);
+   cell7.appendChild(cell7Text);
+
+   var cell8 = document.createElement("td");
+   var cell8Text = document.createTextNode(((doc.data()["Victoires"])/(doc.data()["Défaites"]+doc.data()["Victoires"])).toFixed(2));
+   cell8.appendChild(cell8Text);
+
+   var cell9 = document.createElement("td");
+   var cell9Text = document.createTextNode(doc.data()["PP"]);
+   cell9.appendChild(cell9Text);
+
+   var cell10 = document.createElement("td");
+   var cell10Text = document.createTextNode(doc.data()["PC"]);
+   cell10.appendChild(cell10Text);
+
+   var cell11 = document.createElement("td");
+   var cell11Text = document.createTextNode(doc.data()["PA"]);
+   cell11.appendChild(cell11Text);
+ 
+ 
+
+
+ 
+   row.appendChild(cell1);
+   row.appendChild(cell2);
+   row.appendChild(cell3);
+   row.appendChild(cell4);
+   row.appendChild(cell5);
+   row.appendChild(cell6);
+   row.appendChild(cell7);
+   row.appendChild(cell8);
+   
+   row.appendChild(cell9);
+   row.appendChild(cell10);
+   row.appendChild(cell11);
+
+   var update = document.createElement("button");
+ update.innerHTML = "Modifier";
+ update.onclick = function(){
+   Gettclass(testRowIndex1,doc.id);
+ };
+ update.setAttribute("data-toggle", "modal");
+ update.setAttribute("type", "button");
+ update.setAttribute("data-target","#exampleModalCenter1");
+ update.setAttribute("class","btn btn-primary btn-lg active btn-sm btn-rounded my-2 mx-2");
+
+ row.appendChild(update);
+   tBody3.appendChild(row); 
+   
+   }, error => {
+     console.log(error.message);
+   }
+   );
+
+//----------------------filling modal--------------//
+
+function Gett(index,id) {
+
+// doc.data() is never undefined for query doc snapshots
+clubnom.value = clubnames[index][0];
+fond.value = clubnames[index][1];
+nom.value = clubnames[index][3];
+president.value = clubnames[index][4];
+ville.value=clubnames[index][6];
+cle.value=id;
+
+
+}
+
+function Gettclass(index,id) {
+
+// doc.data() is never undefined for query doc snapshots
+clubcl.value = clubclass[index][0];
+defaites.value = clubclass[index][1];
+victoires.value =clubclass[index][2];
+pp.value = clubclass[index][3];
+pa.value = clubclass[index][4];
+pc.value =clubclass[index][5];
+cle2.value=id;
+
+
+}
+//----------------------Update fuction---------------------//
+
+
+async function update() {
+  var i = cle.value;
+
+  console.log(i);
+
+  const washingtonRef = doc(db, "Equipe", i);
+
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+await updateDoc(washingtonRef, {
+           "Club" : clubnom.value,
+           "Date de fondation":new Date(dateFormat(fond.value, "MM/dd/yyyy") ).toLocaleDateString("fr-FR", options) ,
+           "Nom": nom.value,
+           "Président":president.value,
+           "Salle": ville.value
+}).then(()=>{
+             alert("Mise à jour effectuée avec succès");
+             location.reload(true);
+         })
+         .catch((error)=>{
+             alert("Mise à jour échouée !"+error);
+         });
+
+}
+
+async function updatecl() {
+  var i = cle2.value;
+
+  console.log(i);
+
+  const washingtonRef = doc(db, "Equipe", i);
+
+
+await updateDoc(washingtonRef, {
+           "Défaites": parseInt(defaites.value),
+           "Victoires": parseInt(victoires.value),
+          "PP":parseInt(pp.value),
+          "PA":parseInt(pa.value),
+          "PC": parseInt(pc.value)
+}).then(()=>{
+             alert("Mise à jour effectuée avec succès");
+             location.reload(true);
+         })
+         .catch((error)=>{
+             alert("Mise à jour échouée ! "+error);
+         });
+
+}
+//-------------------delete function---------------------//
+async function del() {
+ var i = cle.value;
+ console.log(i);
+var res = confirm('Êtes-vous sûr de vouloir supprimer cette équipe ?');
+if (res==true) {
+ var ref = doc(db, "Equipe", i);
+await  deleteDoc(ref).then(()=>{
+             alert("Suppression avec succès !");
+             location.reload(true);
+         })
+         .catch((error)=>{
+             alert("La suppression a échouée !"+error);
+         });
+ location.reload(true);
+ 
+} else {
+ event.preventDefault();
+}
+}
+
+
+const rows = document.querySelectorAll('tbody tr');
+
+search.addEventListener("keyup", function (event) {
+  const q = event.target.value.toLowerCase();
+  rows.forEach((row) => {
+    if (searchbox.value == "Club") {
+          row.querySelectorAll("td")[1].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchbox.value == "President") {
+          row.querySelectorAll("td")[6].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchbox.value == "nom") {
+          row.querySelectorAll("td")[2].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+
+  })
+})
+searchxx.addEventListener("keyup", function (event) {
+  const q = event.target.value.toLowerCase();
+  rows.forEach((row) => {
+    if (searchbox.value == "Club") {
+          row.querySelectorAll("td")[1].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchbox.value == "President") {
+          row.querySelectorAll("td")[6].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchbox.value == "nom") {
+          row.querySelectorAll("td")[2].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+
+  })
+})
+searchx.addEventListener("keyup", function (event) {
+  const q = event.target.value.toLowerCase();
+  rows.forEach((row) => {
+    if (searchboxx.value == "Club") {
+          row.querySelectorAll("td")[1].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchboxx.value == "President") {
+          row.querySelectorAll("td")[6].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchboxx.value == "nom") {
+          row.querySelectorAll("td")[2].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+
+  })
+})
+
+
+
+save.addEventListener("click",update);
+drop.addEventListener("click",del);
+savecl.addEventListener("click",updatecl);
+
+
+//--------------------------------------------------//
+
+var files =[];
+var reader = new FileReader();
+
+
+var namebox = document.getElementById('namebox');
+var extlab = document.getElementById('extlab');
+var myimg = document.getElementById('myimg');
+var proglab = document.getElementById('upprogress');
+var selbtn = document.getElementById('selbtn');
+var upbtn = document.getElementById('upbtn');
+
+var input = document.createElement('input');
+input.type = 'file';
+input.onchange = e => {
+    files = e.target.files;
+
+    var extention = GetFileExt(files[0]);
+    var name = GetFileName(files[0]);
+
+    namebox.value= name;
+    extlab.innerHTML = extention;
+
+    reader.readAsDataURL(files[0]);
+}
+reader.onload = function(){
+myimg.src = reader.result;
+}
+/*----------------------------------------------*/
+selbtn.onclick = function () {
+    input.click();
+    
+}
+function GetFileExt(file) {
+    var temp = file.name.split('.');
+    var ext = temp.slice((temp.length-1),(temp.length));
+    return '.' + ext[0];
+}
+function GetFileName(file) {
+    var temp = file.name.split('.');
+    var fname = temp.slice(0,-1).join('.');
+    return fname;
+}
+
+/*----------------------------upload--------------------------*/
+async function UploadProcess(){
+    var ImgToUpload = files[0];
+    var ImgName = namebox.value + extlab.innerHTML;
+
+    const metaData = {
+        contentType: ImgToUpload.type
+    }
+
+const storage = getStorage();
+if (clubnom2.value == "" || nom2.value=="" || president2.value =="") {
+  alert("Club est obligatoire!")
+} else {
+  const storageRef = sRef(storage, "équipeLogo/"+ImgName);
+
+const UploasTask = uploadBytesResumable(storageRef, ImgToUpload, metaData);
+
+UploasTask.on('state-changed', (snapshot)=>{
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes)* 100;
+    proglab.innerHTML = "Upload "+ progress + "%";
+},
+(error) =>{
+    alert("ERREUR : L'image n'a pas pu être sauvegardée!");
+},
+
+()=>{
+    getDownloadURL(UploasTask.snapshot.ref).then((downloadURL)=>{
+        Add(downloadURL);
+    });
+}
+);
+}
+
+
+}
+/*-----------------------------------------------*/
+async function SaveURLtoFirestore(url) {
+    var Club = clubnom2.value;
+
+    var ext = extlab.innerHTML;
+    const ho = new Date() ;
+var Horaire = Timestamp.fromDate(ho);
+
+    var ref = collection(db, "équipeLogo");
+    if (clubnom2.value=="") {
+      alert("Club est obligatoire!")
+    } else {
+      const docRef = await addDoc(
+    ref,{
+         Club: Club,
+         date : Horaire,
+         URL: url
+    }
+)
+    }
+    await setDoc(doc(db, "cities", "LA"), {
+  name: "Los Angeles",
+  state: "CA",
+  country: "USA"
+});
+
+}
+
+//-------------------Add function----------------//
+async function Add(url) {
+   var ref = collection(db, "Equipe");
+   var ref2 = collection(db, "Entraineur");
+if (clubnom2.value == "" || nom2.value=="" || president2.value =="" ) {
+  alert("Club , Nom et Président sont obligatoire")
+} else {
+     const docRef = await addDoc(
+       ref,{
+           "Club" : clubnom2.value,
+           "Email": fond2.value,
+           "Défaites": 0,
+           "Nom": nom2.value,
+           "Président":president2.value,
+           "Victoires": 0,
+           "Salle": ville2.value,
+           "URL" : url,
+           "PP" : 0,
+           "PA": 0,
+           "PC":0
+       }
+   ).then(()=>{
+       alert(`Équipe ${clubnom2.value} ajoutée avec succès !`);
+
+   })
+   .catch((error)=>{
+       alert(`L'équipe ${clubnom2.value} n'a pas pu être ajoutée !`+error);
+   });
+   const docRef2 = await addDoc(
+       ref2,{
+           "Club" : clubnom2.value,
+           "DN": "",
+           "Fonction": "AC",
+           "Nom": "",
+           "ID": "",
+           "LN": "",
+           "Prenom": ville2.value,
+          
+       }
+   ).then(()=>{
+   })
+   .catch((error)=>{
+   });
+   const docRef3 = await addDoc(
+       ref2,{
+           "Club" : clubnom2.value,
+           "DN": "",
+           "Fonction": "HC",
+           "Nom": "",
+           "ID": "",
+           "LN": "",
+           "Prenom": ville2.value,
+          
+       }
+   ).then(()=>{
+    clubnom2.value ="";
+       fond2.value="";
+       nom2.value="";
+       president2.value="";
+   })
+   .catch((error)=>{
+   });
+}
+
+}
+
+
+
+insert.addEventListener("click",UploadProcess);
+
+//---------------------------------------------------------------------------//
+var horaireIMG = document.getElementById('horaireIMG');
+var files1 =[];
+var reader1 = new FileReader();
+
+
+var namebox1 = document.getElementById('namebox1');
+var extlab1 = document.getElementById('extlab1');
+var myimg1 = document.getElementById('myimg1');
+var proglab1 = document.getElementById('upprogress1');
+var selbtn1 = document.getElementById('selbtn1');
+var upbtn1 = document.getElementById('upbtn1');
+var domicilem = document.getElementById('domicilem');
+
+var input1 = document.createElement('input');
+input1.type = 'file';
+input1.onchange = e => {
+    files1 = e.target.files;
+
+    var extention = GetFileExt1(files1[0]);
+    var name = GetFileName1(files1[0]);
+
+    namebox1.value= name;
+    extlab1.innerHTML = extention;
+
+    reader1.readAsDataURL(files1[0]);
+}
+reader1.onload = function(){
+myimg1.src = reader1.result;
+}
+/*----------------------------------------------*/
+selbtn1.onclick = function () {
+    input1.click();
+    
+}
+function GetFileExt1(file) {
+    var temp = file.name.split('.');
+    var ext = temp.slice((temp.length-1),(temp.length));
+    return '.' + ext[0];
+}
+function GetFileName1(file) {
+    var temp = file.name.split('.');
+    var fname = temp.slice(0,-1).join('.');
+    return fname;
+}
+
+
+/*----------------------------upload--------------------------*/
+async function UploadProcess1(){
+    var ImgToUpload = files1[0];
+    var ImgName = namebox1.value + extlab1.innerHTML;
+
+    const metaData = {
+        contentType: ImgToUpload.type
+    }
+
+const storage = getStorage();
+
+const storageRef = sRef(storage, "ImageMatchMOU/"+ImgName);
+if (domicilem.value=="") {
+  alert("ID est obligatoire !")
+} else {
+  const UploasTask = uploadBytesResumable(storageRef, ImgToUpload, metaData);
+
+UploasTask.on('state-changed', (snapshot)=>{
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes)* 100;
+    proglab1.innerHTML = "Upload "+ progress + "%";
+},
+(error) =>{
+    alert("ERREUR : L'image n'a pas pu être sauvegardée! ");
+},
+
+()=>{
+    getDownloadURL(UploasTask.snapshot.ref).then((downloadURL)=>{
+        SaveURLtoFirestore1(downloadURL);
+    });
+}
+);
+}
+
+
+}
+/*-----------------------------------------------*/
+async function SaveURLtoFirestore1(url) {
+   const ho = new Date() ;
+var Horaire = Timestamp.fromDate(ho);
+    var name = namebox1.value;
+    var ext = extlab1.innerHTML;
+
+
+    var ref = collection(db, "ImageTeams");
+    if (domicilem.value=="") {
+      alert("ID est obligatoires !")
+    } else {
+      const docRef = await addDoc(
+    ref,{
+         ID: domicilem.value,
+         Name: name,
+         Date : Horaire,
+         URL: url
+    }
+)
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+upbtn1.onclick = UploadProcess1;
+
+
+</script>
+  </body>
+</html>

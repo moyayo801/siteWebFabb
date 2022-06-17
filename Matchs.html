@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo3.png">
+    <title>Gestion F.A.B.B - Matchs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js'></script>
+  
+    <!-- Additional CSS Files -->
+ 
+
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">  
+ 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <style>
+      i{
+          position: absolute;
+          top: 69%;
+          right: 86%;
+          transform: translate(-50%,-50%);
+          font-size: 20px;
+          color: #ff511a;
+          transition: .2s;
+          padding-top: 15%;
+      }
+      .boxx:hover i{
+        
+          opacity: 0;
+          z-index: -1;
+      }
+      .labs{
+        display: inline-block;
+        width: 100%;
+      }
+          </style>
+    
+
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          <img src="assets/images/logo3.png" alt="">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                        <li class="scroll-to-section"><a href="tables.html" class="active">Accueil</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">Menu</a>
+                            <ul class="sub-menu">
+                              <li><a href="Joueurs.html">Joueurs</a></li>
+                              <li><a href="imgVid.html">Médias</a></li>
+                              <li><a href="News.html">Actualités</a></li>
+                              <li><a href="Equipes.html">Équipe</a></li>
+                              <li><a href="entraineur.html">Entraîneurs</a></li>
+                              <li><a href="equipeNat.html">Sélection nationale</a></li>
+                            </ul>
+                        </li>
+                        <li><a style="visibility: hidden;" href="contact-us.html">Contacts</a></li> 
+                    </ul>           
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+
+  <!-- ***** Main Banner Area End ***** -->
+
+
+
+ 
+
+   <section class="about-us" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 offset-lg-3">
+          <div class="section-heading">
+            <h6>Super-Division Nationale 1</h6>
+            <h4>Matchs</h4>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="naccs">
+            <div class="tabs">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="menu">
+                    <div class="active gradient-border"><span>Calendrier des matchs</span></div>
+                    <div class="gradient-border"><span>Modifier</span></div>
+                    <div class="gradient-border"><span>Compléter match</span></div>
+                    <div class="gradient-border"><span>Programmer match</span></div>
+                    <div class="gradient-border"><span>Photos</span></div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="main-list">
+                          <div class="col-lg-4">
+                        
+                            <div class="boxx">
+                             <div> <select id="searchbox">
+                               <option value="Domicile">Domicile</option>
+                               <option value="Visiteur">Visiteur</option>
+                              
+                              
+                             </select></div>
+                               <form name="search">
+                                   <input type="text" class="input-search" id="search">
+                               </form>
+                                   <i class="fas fa-search"></i>
+                           </div>
+                         
+                          
+                         </div>
+                         <div class="col-lg-12">
+                            <span> 
+                                <div class="table-responsive" style="text-align: center; font-size: 15.5px;">
+                                <table id="tabel_CoverTrans_details" class="table table-bordered  table-hover js-basic-example dataTable " >
+                                <thead class="thead-dark" style="font-weight: bold;">
+                                    <th>ID</th>
+                                    <th>Domicile</th>
+                                    <th>Visiteur</th>
+                               
+                                    <th>Date et Horaire</th>
+                                    <th>Arbitre 1</th>
+                                    <th>Arbitre 2</th>
+                                    <th>Arbitre 3</th>
+                                    <th>Type</th>
+                                    <th>Lieu de la rencontre</th>
+                                    <th>Statut</th>
+                              
+                                
+                                </thead>
+                                <div class="list-item last-item">
+                                    <tbody id="tbody1">
+                              </tbody></div>
+                              </table>
+                            </div> </span>
+                         </div>
+                        </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="main-list">
+                          <div class="col-lg-4">
+                        
+                            <div class="boxx">
+                             <div> <select id="searchboxx">
+                               <option value="Domicile">Domicile</option>
+                               <option value="Visiteur">Visiteur</option>
+              
+                              
+                             </select></div>
+                               <form name="search">
+                                   <input type="text" class="input-search" id="searchx">
+                               </form>
+                                   <i class="fas fa-search"></i>
+                           </div>
+                         
+                          
+                         </div>
+                         <div class="col-lg-12">
+                            <span> 
+                                <div class="table-responsive" style="text-align: center; font-size: 15.5px;">
+                                <table id="tabel_CoverTrans_details" class="table table-bordered  table-hover js-basic-example dataTable " >
+                                <thead class="thead-dark" style="font-weight: bold;">
+                                    <th>ID</th>
+                                    <th>Domicile</th>
+                                    <th>Visiteur</th>
+                                 
+                                    <th>Date et Horaire</th>
+                                    <th>Arbitre 1</th>
+                                    <th>Arbitre 2</th>
+                                    <th>Arbitre 3</th>
+                                    <th>Type</th>
+                                    <th>Lieu de la rencontre</th>
+                                    <th>Statut</th>
+                              
+                                
+                                </thead>
+                                <div class="list-item last-item">
+                                    <tbody id="tbody2">
+                              </tbody></div>
+                              </table>
+                            </div> </span>
+                         </div>
+                        </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="main-list">
+                          <div class="col-lg-4">
+                        
+                            <div class="boxx">
+                             <div> <select id="searchboxxx">
+                               <option value="Domicile">Domicile</option>
+                               <option value="Visiteur">Visiteur</option>
+                              
+                              
+                              
+                             </select></div>
+                               <form name="search">
+                                   <input type="text" class="input-search" id="searchxx">
+                               </form>
+                                   <i class="fas fa-search"></i>
+                           </div>
+                         
+                          
+                         </div>
+                         <div class="col-lg-12">
+                            <span> 
+                                <div class="table-responsive" style="text-align: center; font-size: 15.5px;">
+                                <table id="tabel_CoverTrans_details" class="table table-bordered  table-hover js-basic-example dataTable " >
+                                <thead class="thead-dark" style="font-weight: bold;">
+                                    <th>ID</th>
+                                    <th>Domicile</th>
+                                    <th>Score équipe Domicile</th>
+                                    <th>Score équipe Visiteur</th>
+                                    <th>Visiteur</th>
+                                    <th>Date de la rencontre</th>
+                                    <th>Statut</th>
+                              
+                                
+                                </thead>
+                                <div class="list-item last-item">
+                                    <tbody id="tbodyC">
+                              </tbody></div>
+                              </table>
+                            </div> </span>
+                         </div>
+                        </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="main-list">
+                            <span> <div id="calculate" >
+                                <div class="row">
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="idm" style="color: black;">ID</label>
+                                      <input type="text"  id="idm">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <fieldset>
+                                      <label for="domicilem" style="color: black;">Domicile</label>
+                                      <select  class="form-select" aria-label="Default select example" id="domicilem" >
+                                        <option selected value="Choisi">Choisir</option>
+                                    </select>
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <fieldset>
+                                      <label for="visiteurm" style="color: black;" >Visiteur</label>
+                                      <select  class="form-select" aria-label="Default select example" id="visiteurm" >
+                                        <option selected value="Choisi">Choisir</option>
+                                    </select>
+                                    </fieldset>
+                                  </div>
+                          
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="horairem" style="color: black;" >Date et Horaire de la rencontre</label>
+                                      <input type="text"  id="horairem" >
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="sallem" style="color: black;">Lieu de la rencontre</label>
+                                      <input type="text"  id="sallem">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="typem" style="color: black;">Type</label>
+                                      <select  class="form-select" aria-label="Default select example" id="typem" >
+                                        <option selected value="Choisi">Choisir</option>
+                                        <option value="Championnat Phase de Poules">Championnat Phase de Poules</option>
+                                        <option value="Championnat Playoffs">Championnat Playoffs</option>
+                                        <option value="Championnat PlayDown">Championnat PlayDown</option>
+                                        <option value="Coupe d'Algerie">Coupe d'Algérie</option>
+                  
+                                    </select>
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="arbitrem" style="color: black;">Arbitre 1</label>
+                                      <input type="text"  id="arbitrem">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="arbitrem1" style="color: black;">Arbitre 2</label>
+                                      <input type="text"  id="arbitrem1">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="arbitrem2" style="color: black;">Arbitre 3 (facultatif)</label>
+                                      <input type="text"  id="arbitrem2">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <button id="insert" class="orange-button">Enregistrer</button>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                            </div></span>
+                           
+                        </div>
+                      
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="main-list">
+                            <span> <div id="calculate" >
+                                <div class="row">
+                             
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="idIMG" style="color: black;">ID</label>
+                                      <input type="text"  id="idIMG">
+                                    </fieldset>
+                                  </div>
+                          
+                          
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <div style="margin-left: 40%;" class="orange-button"><button id="selbtn" >Sélectionner une image</button></div>
+                                      
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <div class="image-upload-wrap">
+                                        <img id="myimg">
+                                      </div>
+                                       <label id="upprogress" style="color: #ff511a;"></label>
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <div style="margin-left: 40%;" class="green-button"><button id="upbtn">Enregistrer l'image</button></div>
+                                      
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <fieldset>
+                                      <label for="imagesbox" style="color: black;">Titre de l'image</label>
+                                      <input type="text" id="namebox">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <fieldset>
+                                    <label style="color: blue; margin-top: 18%;" id="extlab"></label>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                            </div></span>
+                           
+                        </div>
+                      
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+     <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Remplir le formulaire</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         
+   <label class="labs">Domicile :</label>                  <select  class="form-select" aria-label="Default select example" id="domicilebox" >
+    <option selected value="Choisi">Choisir</option>
+</select> <br><br>     
+   <label class="labs">Visiteur :</label>   <select  class="form-select" aria-label="Default select example" id="visiteurbox" >
+    <option selected value="Choisi">Choisir</option>
+</select> <br><br>
+   <label class="labs">Date et Horaire :</label>         <input id="horairebox" type="text" class="labs"></input> <br><br>
+   <label class="labs">Salle :</label>         <input id="sallebox" type="text" class="labs"></input> <br><br>
+   <label class="labs">Arbitre 1:</label>         <input id="arbitrebox" type="text" class="labs"></input> <br><br>
+   <label class="labs">Arbitre 2:</label>         <input id="arbitre2box" type="text" class="labs"></input> <br><br>
+   <label class="labs">Arbitre 3:</label>         <input id="arbitre3box" type="text" class="labs"></input> <br><br>
+   <label class="labs">Type:</label>        <select  class="form-select" aria-label="Default select example" id="typebox" >
+    <option selected value="Choisi">Choisir</option>
+    <option value="Championnat Phase de Poules">Championnat Phase de Poules</option>
+    <option value="Championnat Playoffs">Championnat Playoffs</option>
+    <option value="Championnat PlayDown">Championnat PlayDown</option>
+    <option value="Coupe d'Algerie">Coupe d'Algérie</option>
+
+</select> <br><br>
+   
+       </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary" id="save">Enregistrer</button>
+          <button type="button" class="btn btn-danger" id="drop">Supprimer</button>
+    
+          <input type="hidden" name="index" id="index">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="exampleModalCenterV" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Remplir le formulaire</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label class="labs">Statut</label>        <input id="Sjouebox" value="true" type="checkbox" class="labs"></input> <br><br>
+          <label class="labs">Domicile :</label>                 <input disabled id="domicileboxS" type="text" class="labs"></input> <br><br> 
+   <label class="labs">Score équipe Domicile</label>                 <input id="Sdomicilebox" type="number" class="labs"></input> <br><br>   
+   <label class="labs">Visiteur :</label>  <input id="visiteurboxS" type="text" disabled class="labs"></input> <br><br>  
+   <label class="labs">Score équipe Visiteur </label>  <input id="Svisiteurbox" type="number" class="labs"></input> <br><br>
+  
+    
+       </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary" id="Ssave">Enregistrer</button>
+
+    
+          <input type="hidden"  id="indexx">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/swiper.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script> 
+
+  <script>
+      var interleaveOffset = 0.5;
+
+    var swiperOptions = {
+      loop: true,
+      speed: 1000,
+      grabCursor: true,
+      watchSlidesProgress: true,
+      mousewheelControl: true,
+      keyboardControl: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        progress: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            var slideProgress = swiper.slides[i].progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            swiper.slides[i].querySelector(".slide-inner").style.transform =
+              "translate3d(" + innerTranslate + "px, 0, 0)";
+          }      
+        },
+        touchStart: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = "";
+          }
+        },
+        setTransition: function(speed) {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = speed + "ms";
+            swiper.slides[i].querySelector(".slide-inner").style.transition =
+              speed + "ms";
+          }
+        }
+      }
+    };
+
+    var swiper = new Swiper(".swiper-container", swiperOptions);
+  </script>
+
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+    
+
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAVpkaI_1x5d4ItI4kaiN2xOxPmXH_wjnE",
+      authDomain: "yatosama-demo.firebaseapp.com",
+      databaseURL: "https://yatosama-demo-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "yatosama-demo",
+      storageBucket: "yatosama-demo.appspot.com",
+      messagingSenderId: "440036821979",
+      appId: "1:440036821979:web:0436e491278d04d78375fe",
+      measurementId: "G-4XHSQ4HZXZ"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    import{
+    Timestamp,getFirestore, doc, onSnapshot, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField, query, where , getDocs,orderBy, limit
+ }
+ from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+ import{
+        getStorage, ref as sRef, uploadBytesResumable, getDownloadURL  }
+   from "https://www.gstatic.com/firebasejs/9.6.8/firebase-storage.js";
+
+  
+
+    const db = getFirestore();
+    //------------------------------------------------//
+
+    var domicile = document.getElementById('domicilebox');
+var visiteur = document.getElementById('visiteurbox');
+var date = document.getElementById('datebox');
+var horaire = document.getElementById('horairebox');
+var joue = document.getElementById('jouebox');
+var salle = document.getElementById('sallebox');
+var arbitre = document.getElementById('arbitrebox');
+var arbitre2 = document.getElementById('arbitre2box');
+var arbitre3 = document.getElementById('arbitre3box');
+var type = document.getElementById('typebox');
+
+var domicilem = document.getElementById('domicilem');
+var visiteurm = document.getElementById('visiteurm');
+var horairem = document.getElementById('horairem');
+var sallem = document.getElementById('sallem');
+var idm = document.getElementById('idm');
+var typem = document.getElementById('typem');
+var arbitrem = document.getElementById('arbitrem');
+var arbitrem1 = document.getElementById('arbitrem1');
+var arbitrem2 = document.getElementById('arbitrem2');
+
+var Sdomicile = document.getElementById('Sdomicilebox');
+var Svisiteur = document.getElementById('Svisiteurbox');
+var domicileS = document.getElementById('domicileboxS');
+var visiteurS = document.getElementById('visiteurboxS');
+var Sjoue = document.getElementById('Sjouebox');
+
+var domicileIMG = document.getElementById('domicileIMG');
+var visiteurIMG = document.getElementById('visiteurIMG');
+var idIMG = document.getElementById('idIMG');
+
+var save = document.getElementById('save');
+var Ssave = document.getElementById('Ssave');
+var searchbox = document.getElementById('searchbox');
+ const search = document.getElementById('search');
+
+ var searchboxx = document.getElementById('searchboxx');
+ const searchx = document.getElementById('searchx');
+
+ var searchboxxx = document.getElementById('searchboxxx');
+ const searchxx = document.getElementById('searchxx');
+
+var drop = document.getElementById('drop');
+var Sdrop = document.getElementById('Sdrop');
+var cle = document.getElementById('index');
+var cle2 = document.getElementById('indexx');
+var clubnames = [];
+var score = [];
+const tBody1 = document.getElementById('tbody1');
+const tBody = document.getElementById('tbody2');
+const tBodyC = document.getElementById('tbodyC');
+const ref = collection(db, "Match");
+var cmp =0;
+var cmp1 =0;
+var cmpSelect =0;
+var scmp =0;
+    let matchs = [];
+    var cmp = 0;
+    flatpickr("#horairebox", {
+  enableTime: true,
+  "locale": "fr"
+
+});
+flatpickr("#datem", {});
+flatpickr("#horairem", {
+  enableTime: true,
+  "locale": "fr"
+
+});
+flatpickr("#horaireIMG", {
+  enableTime: true,
+  "locale": "fr"
+
+});
+    //--------------------filling table-----------------------//
+    //a simple date formatting function
+    function dateFormat(inputDate, format) {
+      //parse the input date
+      const date = new Date(inputDate);
+
+      //extract the parts of the date
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
+
+      //replace the month
+      format = format.replace("MM", month.toString().padStart(2, "0"));
+
+      //replace the year
+      if (format.indexOf("yyyy") > -1) {
+        format = format.replace("yyyy", year.toString());
+      } else if (format.indexOf("yy") > -1) {
+        format = format.replace("yy", year.toString().substr(2, 2));
+      }
+
+      //replace the day
+      format = format.replace("dd", day.toString().padStart(2, "0"));
+
+      return format;
+    }
+
+    const q = collection(db, "Match");
+    const q2 = query(q, orderBy("Horaire", "desc"));
+    const querySnapshot = await getDocs(q2);
+    const select = await getDocs(collection(db, "Equipe"));
+    const querySnapshot2 = await getDocs(collection(db, "Match"));
+    var content = '';
+
+select.forEach(
+  doc =>{
+    var el = document.createElement("option");
+        el.textContent =doc.data()["Club"] ;
+       el.value = doc.data()["Club"];
+       domicilem.appendChild(el); 
+
+    var el1 = document.createElement("option");
+    el1.textContent =doc.data()["Club"] ;
+    el1.value = doc.data()["Club"];
+    visiteurm.appendChild(el1);
+    var el3 = document.createElement("option");
+    el3.textContent =doc.data()["Club"] ;
+    el3.value = doc.data()["Club"];
+    visiteur.appendChild(el3);
+
+    var el4 = document.createElement("option");
+    el4.textContent =doc.data()["Club"] ;
+    el4.value = doc.data()["Club"];
+    domicile.appendChild(el4);
+
+  }, error => {
+      console.log(error.message);
+    }
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    querySnapshot.forEach(doc => {
+      
+      var testRowIndex = clubnames.push([doc.data()["Domicile"],doc.data()["Visiteur"],doc.data()["Date"],doc.data()["Horaire"].toDate().toUTCString(),doc.data()["Arbitre"],doc.data()["Arbitre 2"],doc.data()["Arbitre 3"],doc.data()["Salle"],doc.data()["Joué"],doc.data()["Type"]]) -1 ;
+ var row = document.createElement("tr");
+
+ var cell1 = document.createElement("td");
+ var cell1Text = document.createTextNode((doc.data()["ID"]));
+ cell1.appendChild(cell1Text);
+
+ var cell2 = document.createElement("td");
+ var cell2Text = document.createTextNode(doc.data()["Domicile"]);
+ cell2.appendChild(cell2Text);
+
+ var cell3 = document.createElement("td");
+ var cell3Text = document.createTextNode(doc.data()["Visiteur"]);
+ cell3.appendChild(cell3Text);
+
+
+ var cell5 = document.createElement("td");
+ var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour : 'numeric' , minute :'numeric' , hour12: false };
+ var cell5Text = document.createTextNode(doc.data()["Horaire"].toDate().toLocaleDateString("fr-FR", options));
+ cell5.appendChild(cell5Text);
+
+ var cell6 = document.createElement("td");
+ var cell6Text = document.createTextNode(doc.data()["Arbitre"]);
+ cell6.appendChild(cell6Text);
+
+ var cell7 = document.createElement("td");
+ var cell7Text = document.createTextNode(doc.data()["Arbitre 2"]);
+ cell7.appendChild(cell7Text);
+
+ var cell8 = document.createElement("td");
+ var cell8Text = document.createTextNode(doc.data()["Arbitre 3"]);
+ cell8.appendChild(cell8Text);
+ var cell10 = document.createElement("td");
+ var cell10Text = document.createTextNode(doc.data()["Type"]);
+ cell10.appendChild(cell10Text);
+ var cell20 = document.createElement("td");
+ var cell20Text = document.createTextNode(doc.data()["Salle"]);
+ cell20.appendChild(cell20Text);
+
+ var cell9 = document.createElement("td");
+ var cell9Text = document.createTextNode(doc.data()["Joué"]? "Terminé" : "Programmé");
+ cell9.appendChild(cell9Text);
+
+
+ 
+
+ row.appendChild(cell1);
+ row.appendChild(cell2);
+ row.appendChild(cell3);
+ 
+ row.appendChild(cell5);
+ row.appendChild(cell6);
+ row.appendChild(cell7);
+ row.appendChild(cell8);
+ row.appendChild(cell10);
+ row.appendChild(cell20);
+ row.appendChild(cell9);
+ 
+
+ var update = document.createElement("button");
+ update.innerHTML = "Modifier";
+ update.onclick = function(){ console.log(doc.id);
+   Gett(testRowIndex,doc.id);
+  
+ };
+ update.setAttribute("data-toggle", "modal");
+ update.setAttribute("type", "button");
+ update.setAttribute("data-target","#exampleModalCenter");
+ update.setAttribute("class","btn btn-primary btn-lg active btn-sm btn-rounded my-2 mx-2");
+
+ row.appendChild(update);
+
+
+
+   tBody.appendChild(row);
+      let match = {
+        title: `${doc.data()["Domicile"]} ${doc.data()["scoreDomicile"]} vs ${doc.data()["scoreVisiteur"]} ${doc.data()["Visiteur"]} ` ,
+        start: dateFormat(doc.data()["Horaire"].toDate(), 'yyyy-MM-dd')
+      };
+     
+      matchs.push(match);
+    }, error => {
+      console.log(error.message);
+    }
+    );
+    
+
+
+   
+
+
+
+
+
+    querySnapshot.forEach(doc => {
+      
+      var row = document.createElement("tr");
+
+ var cell1 = document.createElement("td");
+ var cell1Text = document.createTextNode((doc.data()["ID"]));
+ cell1.appendChild(cell1Text);
+
+ var cell2 = document.createElement("td");
+ var cell2Text = document.createTextNode(doc.data()["Domicile"]);
+ cell2.appendChild(cell2Text);
+
+ var cell3 = document.createElement("td");
+ var cell3Text = document.createTextNode(doc.data()["Visiteur"]);
+ cell3.appendChild(cell3Text);
+
+
+ var cell5 = document.createElement("td");
+ var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour : 'numeric' , minute :'numeric' , hour12: false };
+ var cell5Text = document.createTextNode(doc.data()["Horaire"].toDate().toLocaleDateString("fr-FR", options));
+ cell5.appendChild(cell5Text);
+
+ var cell6 = document.createElement("td");
+ var cell6Text = document.createTextNode(doc.data()["Arbitre"]);
+ cell6.appendChild(cell6Text);
+
+ var cell7 = document.createElement("td");
+ var cell7Text = document.createTextNode(doc.data()["Arbitre 2"]);
+ cell7.appendChild(cell7Text);
+
+ var cell8 = document.createElement("td");
+ var cell8Text = document.createTextNode(doc.data()["Arbitre 3"]);
+ cell8.appendChild(cell8Text);
+ var cell10 = document.createElement("td");
+ var cell10Text = document.createTextNode(doc.data()["Type"]);
+ cell10.appendChild(cell10Text);
+ var cell20 = document.createElement("td");
+ var cell20Text = document.createTextNode(doc.data()["Salle"]);
+ cell20.appendChild(cell20Text);
+
+ var cell9 = document.createElement("td");
+ var cell9Text = document.createTextNode(doc.data()["Joué"]? "Terminé" : "Programmé");
+ cell9.appendChild(cell9Text);
+
+
+ 
+
+ row.appendChild(cell1);
+ row.appendChild(cell2);
+ row.appendChild(cell3);
+
+ row.appendChild(cell5);
+ row.appendChild(cell6);
+ row.appendChild(cell7);
+ row.appendChild(cell8);
+ row.appendChild(cell10);
+ row.appendChild(cell20);
+ row.appendChild(cell9);
+ 
+
+
+
+
+
+   tBody1.appendChild(row);
+ 
+    }, error => {
+      console.log(error.message);
+    }
+    );
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    querySnapshot.forEach(doc => {
+ var testRowIndex = score.push([doc.data()["Domicile"],doc.data()["scoreDomicile"],doc.data()["Visiteur"],doc.data()["scoreVisiteur"],doc.data()["Joué"]]) -1 ;
+ var row = document.createElement("tr");
+
+ var cell1 = document.createElement("td");
+ var cell1Text = document.createTextNode((doc.data()["ID"]));
+ cell1.appendChild(cell1Text);
+
+ var cell2 = document.createElement("td");
+ var cell2Text = document.createTextNode(doc.data()["Domicile"]);
+ cell2.appendChild(cell2Text);
+
+ var cell7 = document.createElement("td");
+ var cell7Text = document.createTextNode(doc.data()["scoreDomicile"]);
+ cell7.appendChild(cell7Text);
+ var cell8 = document.createElement("td");
+ var cell8Text = document.createTextNode(doc.data()["scoreVisiteur"]);
+ cell8.appendChild(cell8Text);
+
+ var cell3 = document.createElement("td");
+ var cell3Text = document.createTextNode(doc.data()["Visiteur"]);
+ cell3.appendChild(cell3Text);
+
+ var cell5 = document.createElement("td");
+ var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour : 'numeric' , minute :'numeric' , hour12: false };
+ var cell5Text = document.createTextNode(doc.data()["Horaire"].toDate().toLocaleDateString("fr-FR", options));
+ cell5.appendChild(cell5Text);
+
+ var cell6 = document.createElement("td");
+ var cell6Text = document.createTextNode(doc.data()["Joué"]? "Terminé" : "Programmé");
+ cell6.appendChild(cell6Text);
+
+
+ 
+
+ row.appendChild(cell1);
+ row.appendChild(cell2);
+ row.appendChild(cell7);
+ row.appendChild(cell8);
+ row.appendChild(cell3);
+ row.appendChild(cell5);
+ row.appendChild(cell6);
+
+ 
+
+ var updateC = document.createElement("button");
+ updateC.innerHTML = "Modifier";
+ updateC.onclick = function(){
+   GettC(testRowIndex,doc.id);
+
+ };
+ updateC.setAttribute("data-toggle", "modal");
+ updateC.setAttribute("type", "button");
+ updateC.setAttribute("data-target","#exampleModalCenterV");
+ updateC.setAttribute("class","btn btn-primary btn-lg active btn-sm btn-rounded my-2 mx-2");
+
+ row.appendChild(updateC);
+
+
+
+   tBodyC.appendChild(row);
+   
+ 
+ }, error => {
+   console.log(error.message);
+ }
+ );
+ 
+//----------------------filling modal--------------//
+
+function Gett(index,id) {
+  const ho = new Date(clubnames[index][3]) 
+// doc.data() is never undefined for query doc snapshots
+domicile.value = clubnames[index][0];
+visiteur.value = clubnames[index][1];
+horaire.value = ho;
+arbitre.value =clubnames[index][4];
+arbitre2.value =clubnames[index][5];
+arbitre3.value =clubnames[index][6];
+salle.value =clubnames[index][7];
+type.value=clubnames[index][9]
+
+
+
+cle.value=id;
+
+
+}
+function GettC(index,id) {
+ 
+
+// doc.data() is never undefined for query doc snapshots
+Sdomicile.value = score[index][1];
+domicileS.value = score[index][0];
+visiteurS.value = score[index][2];
+Svisiteur.value = score[index][3];
+Sjoue.value = score[index][4];
+if (score[index][4]== true ) {
+  Sjoue.setAttribute("checked", "checked");
+}else{
+  Sjoue.removeAttribute("checked");
+ }
+
+cle2.value=id;
+
+
+}
+//----------------------Update fuction---------------------//
+
+
+async function update() {
+  var i = cle.value;
+  var jouee = true ;
+  const ho = new Date(horaire.value) ;
+
+  var Horaire = Timestamp.fromDate(ho);
+   var date = dateFormat(ho, 'dd/MM/yyyy');
+  const washingtonRef = doc(db, "Match", i);
+
+
+await updateDoc(washingtonRef, {
+           "Domicile" : domicile.value,
+           "Visiteur": visiteur.value,
+           "Salle": salle.value,
+           "Date":date,
+           "Arbitre": arbitre.value,
+           "Arbitre 2": arbitre2.value,
+           "Arbitre 3": arbitre3.value,
+           "Horaire": Horaire ,
+           "Type":type.value
+      
+}).then(()=>{
+             alert("Mise à jour effectuée !");
+             location.reload(true);
+         })
+         .catch((error)=>{
+             alert("Mise à jour échouée !"+error);
+         });
+
+}
+/*------------------------------------------------------------*/
+
+
+
+async function updateS() {
+  const co = collection(db, "Equipe");
+  const q = query(co, where("Club", "==", `${domicileS.value}`), limit(1));
+  const q2 = query(co, where("Club", "==", `${visiteurS.value}`), limit(1));
+  const qq = await getDocs(q);
+  const qq2 = await getDocs(q2);
+  var dom;
+  var ppd, pcd,def,vic;
+  var vis;
+  var ppv, pcv,defv,vicv;
+  var i = cle2.value;
+  var eqn = false;
+if (Sjoue.checked == true) {
+  eqn = true;
+}
+
+
+ qq.forEach(doc=>{
+dom = doc.id;
+ppd =parseInt(doc.data()["PP"]);
+pcd =parseInt(doc.data()["PC"]);
+def =parseInt(doc.data()["Défaites"]);
+vic=parseInt(doc.data()["Victoires"]);
+}, error => {
+   console.log(error.message);
+ })
+const washingtonRef1 = doc(db, "Equipe", dom);
+await updateDoc(washingtonRef1, {
+  "PP":ppd+parseInt(Sdomicile.value),
+  "PC":pcd+parseInt(Svisiteur.value),
+   "PA":(ppd+parseInt(Sdomicile.value))-(pcd+parseInt(Svisiteur.value)),
+   "Défaites": (parseInt(Sdomicile.value)>parseInt(Svisiteur.value))? (def): (def+1),
+   "Victoires": (parseInt(Sdomicile.value)>parseInt(Svisiteur.value))? (vic+1): vic,
+
+}).then(()=>{
+})
+.catch((error)=>{
+  alert("Mise à jour échouée !"+error);
+});
+
+
+qq2.forEach(doc=>{
+vis = doc.id;
+ppv =parseInt(doc.data()["PP"]);
+pcv =parseInt(doc.data()["PC"]);
+defv =parseInt(doc.data()["Défaites"]);
+vicv=parseInt(doc.data()["Victoires"]);
+}, error => {
+   console.log(error.message);
+ })
+const washingtonRef2 = doc(db, "Equipe", vis);
+await updateDoc(washingtonRef2, {
+  "PP":ppv+parseInt(Svisiteur.value),
+  "PC":pcv+parseInt(Sdomicile.value),
+  "PA":(ppv+parseInt(Svisiteur.value))- (pcv+parseInt(Sdomicile.value)),
+  "Défaites": (parseInt(Svisiteur.value)>parseInt(Sdomicile.value))? (defv): (defv+1),
+   "Victoires": (parseInt(Svisiteur.value)>parseInt(Sdomicile.value))? (vicv+1): vicv,
+
+}).then(()=>{
+})
+.catch((error)=>{
+  alert("Mise à jour échouée !"+error);
+});
+
+
+/*const washingtonRef2 = doc(db, "Equipe", qq2[0].id);
+await updateDoc(washingtonRef2, {
+  "PP":doc.data()["PP"]+parseInt(Svisiteur.value),
+  "PC":doc.data()["PC"]+parseInt(Sdomicile.value)
+
+
+}).then(()=>{
+  alert("Mise à jour effectuée !");
+  
+
+
+})
+.catch((error)=>{
+  alert("Mise à jour échouée !"+error);
+});
+ */
+  
+  const washingtonRef = doc(db, "Match", i);
+
+
+await updateDoc(washingtonRef, {
+
+           "scoreDomicile":parseInt(Sdomicile.value) ,
+           "scoreVisiteur":parseInt(Svisiteur.value)  ,
+           "Joué": eqn,
+      
+}).then(()=>{
+             alert("Mise à jour effectuée !");
+             
+
+
+         })
+         .catch((error)=>{
+             alert("Mise à jour échouée !"+error);
+         });
+         
+   const querySnapshot = await getDocs(collection(db, "Utilisateurs"));
+   querySnapshot.forEach(doc => {
+         var fav;
+         if (doc.data()["Favoris"] == domicileS.value) {
+           fav = "domicile";
+         }else{
+           if (doc.data()["Favoris"] == visiteurS.value) {
+             fav = "visiteur"
+           }
+         }
+
+     if (fav == "domicile") {
+     Email.send({
+        
+        SecureToken : "f93c2c27-3b20-44b2-9cd7-d5d490c13215",
+        To: `${doc.data()["Adresse mail"]}`,
+        From: "federationbasketballdz@gmail.com",
+        Subject: "Match de votre équipe favorite.",
+        Body: `Bonjour ${doc.data()["Nom"]} ${doc.data()["Prénom"]},\n
+Votre équipe favorite -${domicileS.value}- a disputé son match de la semaine. Nous vous invitions à vous rendre à l’application mobile F.A.B.B pour découvrir le résultat du match ainsi que la mise à jour du classement du championnat de la Super-Division Nationale 1 Masculine.
+Ce message a été envoyé automatiquement. Nous vous remercions de ne pas répondre.\n\n
+
+Cordialement,\n
+La Fédération Algérienne de Basket-ball -F.A.B.B-`,
+      })
+        .then(function (message) {
+          location.reload(true);
+        });      
+     }else{
+       if (fav == "visiteur") {
+        Email.send({
+        
+        SecureToken : "f93c2c27-3b20-44b2-9cd7-d5d490c13215",
+        To: `${doc.data()["Adresse mail"]}`,
+        From: "federationbasketballdz@gmail.com",
+        Subject: "Match de votre équipe favorite.",
+        Body: `Bonjour ${doc.data()["Nom"]} ${doc.data()["Prénom"]},\n 
+Votre équipe favorite -${visiteurS.value}- a disputé son match de la semaine. Nous vous invitions à vous rendre à l’application mobile F.A.B.B pour découvrir le résultat du match ainsi que la mise à jour du classement du championnat de la Super-Division Nationale 1 Masculine.
+Ce message a été envoyé automatiquement. Nous vous remercions de ne pas répondre.\n\n
+
+Cordialement,\n
+La Fédération Algérienne de Basket-ball -F.A.B.B-`,
+      })
+        .then(function (message) {
+          location.reload(true);
+        }); 
+       }
+     }
+}, error => {
+   console.log(error.message);
+ }
+ );
+
+}
+//-------------------delete function---------------------//
+async function del() {
+ var i = cle.value;
+ console.log(i);
+var res = confirm('Êtes-vous sûr de bien vouloir supprimer ce match ?');
+if (res==true) {
+ var ref = doc(db, "Match", i);
+await  deleteDoc(ref).then(()=>{
+             alert("Suppression effectuée avec succès !");
+             location.reload(true);
+         })
+         .catch((error)=>{
+             alert("La suppression a échouée !"+error);
+         });
+ location.reload(true);
+ 
+} else {
+ event.preventDefault();
+}
+}
+
+//------------------Add function--------------------//
+async function Add() {
+
+
+   var ref = collection(db, "Match");
+   const ho = new Date(horairem.value) ;
+   var date = dateFormat(ho, 'dd/MM/yyyy');
+var joue = false;
+var Horaire = Timestamp.fromDate(ho);
+if (domicilem.value=="Choisi"|| visiteurm.value=="Choisi" || typem.value=="Choisi" ) {
+  alert("Équipe Domicile, Visiteur et Type du match sont obligatoires!")
+} else {
+  const docRef = await addDoc(
+       ref,{
+           "ID": idm.value,
+           "Domicile" : domicilem.value,
+           "Visiteur": visiteurm.value,
+           "Date":date ,
+           "Horaire": Horaire ,
+           "Joué": joue,
+           "Salle":sallem.value,
+           "Type":typem.value,
+           "Arbitre":arbitrem.value,
+           "Arbitre 2":arbitrem1.value,
+           "Arbitre 3":arbitrem2.value,
+           "scoreDomicile":parseInt(0),
+           "scoreVisiteur":parseInt(0)
+       }
+   ).then(()=>{
+       alert("Match programmé avec succès !");
+   })
+   .catch((error)=>{
+       alert("Le match n'a pas pu être programmé !"+error);
+   });
+
+   const querySnapshot = await getDocs(collection(db, "Utilisateurs"));
+   querySnapshot.forEach(doc => {
+         var fav;
+         if (doc.data()["Favoris"] == domicilem.value) {
+           fav = "domicile";
+         }else{
+           if (doc.data()["Favoris"] == visiteurm.value) {
+             fav = "visiteur"
+           }
+         }
+
+     if (fav == "domicile") {
+     Email.send({
+        
+        SecureToken : "f93c2c27-3b20-44b2-9cd7-d5d490c13215",
+        To: `${doc.data()["Adresse mail"]}`,
+        From: "federationbasketballdz@gmail.com",
+        Subject: "Match de votre équipe favorite.",
+        Body: `Bonjour ${doc.data()["Nom"]} ${doc.data()["Prénom"]},\n
+Votre équipe favorite -${domicilem.value}- a disputé son match de la semaine. Nous vous invitions à vous rendre à l’application mobile F.A.B.B pour découvrir le résultat du match ainsi que la mise à jour du classement du championnat de la Super-Division Nationale 1 Masculine.
+Ce message a été envoyé automatiquement. Nous vous remercions de ne pas répondre.\n\n
+
+Cordialement,\n
+La Fédération Algérienne de Basket-ball -F.A.B.B-`,
+      })
+        .then(function (message) {
+        });      
+     }else{
+       if (fav == "visiteur") {
+        Email.send({
+        
+        SecureToken : "f93c2c27-3b20-44b2-9cd7-d5d490c13215",
+        To: `${doc.data()["Adresse mail"]}`,
+        From: "federationbasketballdz@gmail.com",
+        Subject: "Match de votre équipe favorite.",
+        Body: `Bonjour ${doc.data()["Nom"]} ${doc.data()["Prénom"]},\n
+Votre équipe favorite -${visiteurm.value}- a disputé son match de la semaine. Nous vous invitions à vous rendre à l’application mobile F.A.B.B pour découvrir le résultat du match ainsi que la mise à jour du classement du championnat de la Super-Division Nationale 1 Masculine.
+Ce message a été envoyé automatiquement. Nous vous remercions de ne pas répondre.\n\n
+
+Cordialement,\n
+La Fédération Algérienne de Basket-ball -F.A.B.B-`,
+      })
+        .then(function (message) {
+        }); 
+       }
+     }
+}, error => {
+   console.log(error.message);
+ }
+ );
+}
+   
+}
+
+
+const rows = document.querySelectorAll('tbody tr');
+
+search.addEventListener("keyup", function (event) {
+  const q = event.target.value.toLowerCase();
+  rows.forEach((row) => {
+    if (searchbox.value == "Domicile") {
+          row.querySelectorAll("td")[1].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchbox.value == "Visiteur") {
+          row.querySelectorAll("td")[2].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchbox.value == "Joue") {
+          row.querySelectorAll("td")[5].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+
+  })
+})
+
+searchx.addEventListener("keyup", function (event) {
+  const q = event.target.value.toLowerCase();
+  rows.forEach((row) => {
+    if (searchboxx.value == "Domicile") {
+          row.querySelectorAll("td")[1].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchboxx.value == "Visiteur") {
+          row.querySelectorAll("td")[2].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchboxx.value == "Joue") {
+          row.querySelectorAll("td")[5].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+
+  })
+})
+
+searchxx.addEventListener("keyup", function (event) {
+  const q = event.target.value.toLowerCase();
+  rows.forEach((row) => {
+    if (searchboxxx.value == "Domicile") {
+          row.querySelectorAll("td")[1].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchboxxx.value == "Visiteur") {
+          row.querySelectorAll("td")[4].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchboxxx.value == "Joue") {
+          row.querySelectorAll("td")[5].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+
+  })
+})
+
+insert.addEventListener("click",Add);
+save.addEventListener("click",update);
+drop.addEventListener("click",del);
+Ssave.addEventListener("click",updateS);
+/*------------------------------------------*/
+
+var horaireIMG = document.getElementById('horaireIMG');
+var files =[];
+var reader = new FileReader();
+
+
+var namebox = document.getElementById('namebox');
+var extlab = document.getElementById('extlab');
+var myimg = document.getElementById('myimg');
+var proglab = document.getElementById('upprogress');
+var selbtn = document.getElementById('selbtn');
+var upbtn = document.getElementById('upbtn');
+
+var input = document.createElement('input');
+input.type = 'file';
+input.onchange = e => {
+    files = e.target.files;
+
+    var extention = GetFileExt(files[0]);
+    var name = GetFileName(files[0]);
+
+    namebox.value= name;
+    extlab.innerHTML = extention;
+
+    reader.readAsDataURL(files[0]);
+}
+reader.onload = function(){
+myimg.src = reader.result;
+}
+/*----------------------------------------------*/
+selbtn.onclick = function () {
+    input.click();
+    
+}
+function GetFileExt(file) {
+    var temp = file.name.split('.');
+    var ext = temp.slice((temp.length-1),(temp.length));
+    return '.' + ext[0];
+}
+function GetFileName(file) {
+    var temp = file.name.split('.');
+    var fname = temp.slice(0,-1).join('.');
+    return fname;
+}
+
+/*----------------------------upload--------------------------*/
+async function UploadProcess(){
+    var ImgToUpload = files[0];
+    var ImgName = namebox.value + extlab.innerHTML;
+
+    const metaData = {
+        contentType: ImgToUpload.type
+    }
+
+const storage = getStorage();
+
+const storageRef = sRef(storage, "ImageMatchMOU/"+ImgName);
+if (idIMG.value=="") {
+  alert("ID est obligatoire !")
+} else {
+  const UploasTask = uploadBytesResumable(storageRef, ImgToUpload, metaData);
+
+UploasTask.on('state-changed', (snapshot)=>{
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes)* 100;
+    proglab.innerHTML = "Upload "+ progress + "%";
+},
+(error) =>{
+    alert("ERREUR : L'image n'a pas pu être sauvegardée! ");
+},
+
+()=>{
+    getDownloadURL(UploasTask.snapshot.ref).then((downloadURL)=>{
+        SaveURLtoFirestore(downloadURL);
+    });
+}
+);
+}
+
+
+}
+/*-----------------------------------------------*/
+async function SaveURLtoFirestore(url) {
+   const ho = new Date() ;
+var Horaire = Timestamp.fromDate(ho);
+    var name = namebox.value;
+    var ext = extlab.innerHTML;
+
+
+    var ref = collection(db, "ImageGames");
+    if (idIMG.value=="") {
+      alert("ID est obligatoire !")
+    } else {
+      const docRef = await addDoc(
+    ref,{
+         id: idIMG.value,
+         Name: name,
+         Date : Horaire,
+         URL: url
+    }
+)
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+upbtn.onclick = UploadProcess;
+
+    
+
+
+
+
+
+
+  </script>
+  </body>
+</html>

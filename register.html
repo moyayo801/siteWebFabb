@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <link rel="icon" type="image/png" href="assets/images/logo3.png">
+    <title>Gestion F.A.B.B</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          <img src="assets/images/logo3.png" alt="">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                        <li class="scroll-to-section"><a href="tables.html" class="active">Accueil</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">Menu</a>
+                            <ul class="sub-menu">
+                                <li><a href="Joueurs.html">Joueurs</a></li>
+                                <li><a href="Matchs.html">Matchs</a></li>
+                                <li><a href="Equipes.html">Équipes</a></li>
+                            </ul>
+                        </li>
+                        <li><a style="visibility: hidden;" href="contact-us.html">Contacts</a></li> 
+                    </ul>         
+                           
+                    <a class='menu-trigger'>
+                      <span>Menu</span>
+                  </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+ 
+  <!-- ***** Main Banner Area End ***** -->
+
+ 
+ 
+
+
+   <section class="calculator">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h6>Admin</h6>
+            <h4>Créer un compte</h4>
+          </div>
+          <div id="calculate">
+            <div class="row">
+              <div class="col-lg-12">
+                <fieldset>
+                  <label for="nameinp">Nom et prénom</label>
+                  <input type="text" id="nameinp" placeholder="" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <label for="userinp">Nom d'utilisateur</label>
+                  <input type="text"  id="userinp" placeholder="" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <label for="passinp">Mot de Passe</label>
+                  <input type="password" id="passinp" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-5">
+                <fieldset>
+                  <label for="admin" class="form-label">Type du compte</label>
+                  <select  class="form-select" aria-label="Default select example" id="admin" >
+                      <option selected>Choisi</option>
+                      <option value="Oui">Oui, Admin</option>
+                      <option value="Non">Non, Employé régulier </option>
+
+                  </select>
+              </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="text" id="sub_btn" class="orange-button">S'inscrire</button>
+                </fieldset>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+ 
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+     <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/wow.js"></script>  
+     <script src="assets/js/tabs.js"></script> 
+     <script src="assets/js/swiper.js"></script> 
+    <script src="assets/js/custom.js"></script> 
+    <script>
+        var interleaveOffset = 0.5;
+
+      var swiperOptions = {
+        loop: true,
+        speed: 1000,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        mousewheelControl: true,
+        keyboardControl: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        on: {
+          progress: function() {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              var slideProgress = swiper.slides[i].progress;
+              var innerOffset = swiper.width * interleaveOffset;
+              var innerTranslate = slideProgress * innerOffset;
+              swiper.slides[i].querySelector(".slide-inner").style.transform =
+                "translate3d(" + innerTranslate + "px, 0, 0)";
+            }      
+          },
+          touchStart: function() {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = "";
+            }
+          },
+          setTransition: function(speed) {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = speed + "ms";
+              swiper.slides[i].querySelector(".slide-inner").style.transition =
+                speed + "ms";
+            }
+          }
+        }
+      };
+
+      var swiper = new Swiper(".swiper-container", swiperOptions);
+    </script>
+
+<script type="module">
+    //-------------------------------------------------//
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+    
+     const firebaseConfig = {
+       apiKey: "AIzaSyAVpkaI_1x5d4ItI4kaiN2xOxPmXH_wjnE",
+       authDomain: "yatosama-demo.firebaseapp.com",
+       databaseURL: "https://yatosama-demo-default-rtdb.europe-west1.firebasedatabase.app",
+       projectId: "yatosama-demo",
+       storageBucket: "yatosama-demo.appspot.com",
+       messagingSenderId: "440036821979",
+       appId: "1:440036821979:web:0436e491278d04d78375fe",
+       measurementId: "G-4XHSQ4HZXZ"
+     };
+    
+     // Initialize Firebase
+     const app = initializeApp(firebaseConfig);
+     const analytics = getAnalytics(app);
+     
+    
+     import{
+         getFirestore, doc, onSnapshot, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField, query, where , getDocs,
+     }
+     from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+     import { getDatabase, ref, set, child , get} 
+     
+     from "https://www.gstatic.com/firebasejs/9.6.8/firebase-database.js";
+    const db = getDatabase();
+    //------------------------------------------------------------//
+    const name = document.getElementById('nameinp');
+    const user = document.getElementById('userinp');
+    const pass = document.getElementById('passinp');
+    const submit = document.getElementById('sub_btn');
+    const admin = document.getElementById('admin');
+    //-------------------------------------------------------------//
+    
+    function Validation(){
+        let nameregex = /^[a-zA-Z_ ]*$/;
+        
+        let userregex = /^[a-zA-Z0-9]{5,}$/;
+    
+        if(!nameregex.test(name.value)){
+            alert("name only aphabets");
+            return false;
+        }
+       
+        if(!userregex.test(user.value)){
+            alert("enter valid username");
+            return false;
+        }
+        return true;
+    }
+    //---------------------------------------------------------//
+     function RegisterUser() {
+       if (!Validation()) {
+          return; 
+       } 
+        const dbRef = ref(db);
+    
+        get(child(dbRef, "UserList/"+ user.value)).then((snapshot)=>{
+            if (snapshot.exists()) {
+                alert("account exist");
+                
+            }else{
+                set(ref(db, "UserList/"+ user.value),
+                {
+                    fullname: name.value,
+                   username: user.value,
+                    admin: admin.value,
+                    password: encPass()
+                })
+                .then(()=>{
+                    alert("user added");
+                })
+                .catch((error)=>{
+                    alert("error"+ error);
+                })
+            }
+        });
+        
+    } 
+    //------------------------------------------//
+    function encPass(){
+        var pass12 = CryptoJS.AES.encrypt(pass.value, pass.value);
+        return pass12.toString();
+        
+    }
+    //----------------------------------------------//
+    submit.addEventListener('click', RegisterUser);
+    
+    </script>
+  </body>
+</html>

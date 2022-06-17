@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo3.png">
+    <title>Gestion F.A.B.B - Entraîneurs</title>
+
+    <!-- Bootstrap core CSS -->
+    
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Additional CSS Files -->
+
+ 
+  
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">  
+ 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> 
+    <style>
+      i{
+          position: absolute;
+          top: 69%;
+          right: 86%;
+          transform: translate(-50%,-50%);
+          font-size: 20px;
+          color: #ff511a;
+          transition: .2s;
+          padding-top: 15%;
+      }
+      .boxx:hover i{
+        
+          opacity: 0;
+          z-index: -1;
+      }
+      .labs{
+        display: inline-block;
+        width: 100%;
+      }
+          </style>
+
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          <img src="assets/images/logo3.png" alt="">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                        <li class="scroll-to-section"><a href="tables.html" class="active">Accueil</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">Menu</a>
+                            <ul class="sub-menu">
+                              <li><a href="Joueurs.html">Joueurs</a></li>
+                              <li><a href="Matchs.html">Matchs</a></li>
+                              <li><a href="News.html">Actualités</a></li>
+                              <li><a href="Equipes.html">Équipe</a></li>
+                              <li><a href="imgVid.html">Médias</a></li>
+                              <li><a href="equipeNat.html">Sélection nationale</a></li>
+                            </ul>
+                        </li>
+                        <li><a style="visibility: hidden;" href="contact-us.html">Contacts</a></li> 
+                    </ul>         
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+
+  <!-- ***** Main Banner Area End ***** -->
+
+
+
+ 
+
+   <section class="about-us" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 offset-lg-3">
+          <div class="section-heading">
+            <h6>Super-Division Nationale 1</h6>
+            <h4>Entraîneurs</h4>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="naccs">
+            <div class="tabs">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="menu">
+                    <div class="active gradient-border"><span>Liste des entraîneurs</span></div>
+                    <div class="gradient-border"><span>Modifier</span></div>
+                    <div class="gradient-border"><span>Ajouter</span></div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="main-list">
+                          <div class="col-lg-4">
+                        
+                            <div class="boxx">
+                             <div> <select id="searchbox">
+                               <option value="Nom">Nom</option>
+                               <option value="Prenom">Prénom</option>
+                               <option value="Club">Club</option>
+                               <option value="Fonction">Fonction</option>
+                             </select></div>
+                               <form name="search">
+                                   <input type="text" class="input-search" id="search">
+                               </form>
+                                   <i class="fas fa-search"></i>
+                           </div>
+                         
+                          
+                         </div>
+                         <div class="col-lg-12">      <span>  
+                                 <div class="table-responsive" style="text-align: center; font-size: 15.5px;">
+                            <table id="tabel_CoverTrans_details" class="table table-bordered  table-hover js-basic-example dataTable " >
+                            <thead class="thead-dark" style="font-weight: bold;">
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Date de naissance</th>
+                                <th>Lieu de naissance</th>
+                                <th>Âge</th>
+                                <th>Club</th>
+                                <th>Fonction</th>
+                            
+                            </thead>
+                            <span>
+                                  <tbody id="tbody1">
+                            </tbody></span>
+                          
+                          </table>
+                        </div>
+                    </span></div>
+                      
+                       
+                        </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="main-list">
+                          <div class="col-lg-4">
+                        
+                            <div class="boxx">
+                             <div> <select id="searchboxx">
+                              <option value="Nom">Nom</option>
+                              <option value="Prenom">Prénom</option>
+                              <option value="Club">Club</option>
+                              <option value="Fonction">Fonction</option>
+                             </select></div>
+                               <form name="search">
+                                   <input type="text" class="input-search" id="searchx">
+                               </form>
+                                   <i class="fas fa-search"></i>
+                           </div>
+                         
+                          
+                         </div>
+                         <div class="col-lg-12"> <span> 
+                                <div class="table-responsive" style="text-align: center; font-size: 15.5px;">
+                                <table id="tabel_CoverTrans_details" class="table table-bordered  table-hover js-basic-example dataTable " >
+                                <thead class="thead-dark" style="font-weight: bold;">
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Date de naissance</th>
+                                    <th>Lieu de naissance</th>
+                                    <th>Âge</th>
+                                    <th>Club</th>
+                                    <th>Fonction</th>
+                                
+                                </thead>
+                                <div class="list-item last-item">
+                                    <tbody id="tbody2">
+                              </tbody></div>
+                              </table>
+                            </div> </span></div>
+                           
+                            
+                        </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="main-list">
+                            <span> <div id="calculate" >
+                                <div class="row">
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="idj" style="color: black;" >ID</label>
+                                      <input type="text"  id="idj" >
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <fieldset>
+                                      <label for="nomj" style="color: black;">Nom</label>
+                                      <input type="text"  id="nomj">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <fieldset>
+                                      <label for="prenomj" style="color: black;" >Prénom</label>
+                                      <input type="text"  id="prenomj">
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="datej" style="color: black;" >Date de naissance</label>
+                                      <input type="number"  id="datej" >
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <fieldset>
+                                      <label for="lieuj" style="color: black;" >Lieu de naissance</label>
+                                      <input type="text"  id="lieuj" >
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-4">
+                                  <fieldset>
+                                    <label for="clubj" style="color: black;" >Club</label>
+                                    <select  class="form-select" aria-label="Default select example" id="clubj" >
+                                      <option selected disabled>Choisir</option>
+                                    
+                                      
+                
+                                  </select>
+                                  </fieldset>
+                                </div>
+                                  <div class="col-lg-8">
+                                    <fieldset>
+                                      <label for="foncj" style="color: black;" >Fonction</label>
+                                      <select  class="form-select" aria-label="Default select example" id="foncj" >
+                                        <option selected disabled>Choisir</option>
+                                        <option value="HC">Coach en chef</option>
+                                        <option value="AC">Adjoit-coach</option>
+                                   
+                                      
+                                      
+                                        
+                  
+                                    </select>
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <fieldset>
+                                      <button id="insert" class="orange-button">Enregistrer</button>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                            </div></span>
+                           
+                        </div>
+                      
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+   <footer>
+    <div class="container">
+      <div class="row">
+    
+      </div>
+    </div>
+  </footer>
+
+     <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Remplir le formulaire</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label class="labs">ID :</label>                 <input id="idbox" type="text" class="labs"></input> <br><br>    
+   <label class="labs">Nom :</label>                 <input id="nombox" type="text" class="labs"></input> <br><br>     
+   <label class="labs"> Prénom :</label>  <input id="prenombox" type="text" class="labs"></input> <br><br>
+   <label class="labs">Date de naissance :</label>          <input id="datebox" type="text" class="labs"></input> <br><br>
+   <label class="labs">lieu de naissance :</label>          <input id="lieubox" type="text" class="labs"></input> <br><br>
+   
+   <label class="labs"> Club :</label>         <input id="clubbox" type="text" class="labs"></input> <br><br>
+     <label class="labs">Fonction :</label>               <select  class="form-select" aria-label="Default select example" id="gsbox" >
+    <option selected disabled>Choisir</option>
+    <option value="HC">Coach en chef</option>
+    <option value="AC">Adjoit-coach</option>
+
+  
+  
+    
+
+</select>
+                 
+
+       </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary" id="save">Enregistrer</button>
+          <button type="button" class="btn btn-danger" id="drop">Supprimer</button>
+    
+          <input type="hidden" name="index" id="index">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/swiper.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+      var interleaveOffset = 0.5;
+
+    var swiperOptions = {
+      loop: true,
+      speed: 1000,
+      grabCursor: true,
+      watchSlidesProgress: true,
+      mousewheelControl: true,
+      keyboardControl: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        progress: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            var slideProgress = swiper.slides[i].progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            swiper.slides[i].querySelector(".slide-inner").style.transform =
+              "translate3d(" + innerTranslate + "px, 0, 0)";
+          }      
+        },
+        touchStart: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = "";
+          }
+        },
+        setTransition: function(speed) {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = speed + "ms";
+            swiper.slides[i].querySelector(".slide-inner").style.transition =
+              speed + "ms";
+          }
+        }
+      }
+    };
+
+    var swiper = new Swiper(".swiper-container", swiperOptions);
+  </script>
+
+
+<script type="module">
+  
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+ 
+   const firebaseConfig = {
+     apiKey: "AIzaSyAVpkaI_1x5d4ItI4kaiN2xOxPmXH_wjnE",
+     authDomain: "yatosama-demo.firebaseapp.com",
+     databaseURL: "https://yatosama-demo-default-rtdb.europe-west1.firebasedatabase.app",
+     projectId: "yatosama-demo",
+     storageBucket: "yatosama-demo.appspot.com",
+     messagingSenderId: "440036821979",
+     appId: "1:440036821979:web:0436e491278d04d78375fe",
+     measurementId: "G-4XHSQ4HZXZ"
+   };
+ 
+   // Initialize Firebase
+   const app = initializeApp(firebaseConfig);
+   const analytics = getAnalytics(app);
+ 
+   import{
+       getFirestore, doc, onSnapshot, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField, query, where , getDocs,
+   }
+   from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+ 
+  const db = getFirestore();
+ //------------------------------------------------//
+ 
+ 
+ var nom = document.getElementById('nombox');
+var prenom = document.getElementById('prenombox');
+var date = document.getElementById('datebox');
+var en = document.getElementById('enbox');
+var club = document.getElementById('clubbox');
+var lieu = document.getElementById('lieubox');
+var idd = document.getElementById('idbox');
+var fonction = document.getElementById('gsbox');
+var nomj = document.getElementById('nomj');
+var prenomj = document.getElementById('prenomj');
+var datej = document.getElementById('datej');
+var clubj = document.getElementById('clubj');
+var idj = document.getElementById('idj');
+var lieuj = document.getElementById('lieuj');
+var foncj = document.getElementById('foncj');
+var save = document.getElementById('save');
+var searchbox = document.getElementById('searchbox');
+ const search = document.getElementById('search');
+ var searchboxx = document.getElementById('searchboxx');
+ const searchx = document.getElementById('searchx');
+var drop = document.getElementById('drop');
+var cle = document.getElementById('index');
+var clubnames = [];
+const ref = collection(db, "Joueur");
+ const tBody = document.getElementById('tbody1');
+ const tBody2 = document.getElementById('tbody2');
+ var cmp =0;
+ var cmp1 =0;
+ flatpickr("#horairebox", {
+  enableTime: true,
+
+});
+flatpickr("#fondbox", {
+  
+
+});
+flatpickr("#fond", {
+  
+
+});
+flatpickr("#datej", {
+  
+
+});
+
+//--------------------------------------------------------------//
+const select = await getDocs(collection(db, "Equipe"));
+select.forEach(
+  doc =>{
+    var el = document.createElement("option");
+        el.textContent =doc.data()["Club"] ;
+       el.value = doc.data()["Club"];
+       clubj.appendChild(el); 
+
+  }, error => {
+      console.log(error.message);
+    }
+)
+ //--------------------filling table-----------------------//
+
+ const querySnapshot = await getDocs(collection(db, "Entraineur"));
+ var content = '';
+ //-------------------------table consulter---------------------------//
+ function ageCalculator(date) {  
+      
+    var dob = new Date(date);  
+
+      
+    //calculate month difference from current date in time  
+    var month_diff = Date.now() - dob.getTime();  
+      
+    //convert the calculated difference in date format  
+    var age_dt = new Date(month_diff);   
+      
+    //extract year from date      
+    var year = age_dt.getUTCFullYear();  
+      
+    //now calculate the age of the user  
+    var age = Math.abs(year - 1970);  
+      
+    //display the calculated age  
+    return age ;
+      
+}  
+ function getAge(dateString) { // Oct 23
+
+    var dateParts = dateString.split("/");
+
+    // month is 0-based, that's why we need dataParts[1] - 1
+    var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
+
+    var ageInMilliseconds = Math.abs(new Date() - dateObject);
+
+    return Math.floor(ageInMilliseconds/1000/60/60/24/365); // convert to years
+}
+
+ querySnapshot.forEach(doc => {
+        var row = document.createElement("tr");
+     
+       var cell1 = document.createElement("td");
+       var cell1Text = document.createTextNode(doc.data()["ID"]);
+       cell1.appendChild(cell1Text);
+     
+       var cell2 = document.createElement("td");
+       var cell2Text = document.createTextNode(doc.data()["Nom"]);
+       cell2.appendChild(cell2Text);
+     
+       var cell3 = document.createElement("td");
+       var cell3Text = document.createTextNode(doc.data()["Prenom"]);
+       cell3.appendChild(cell3Text);
+     
+       var cell04 = document.createElement("td");
+       var cell04Text = document.createTextNode(doc.data()["DN"]);
+       cell04.appendChild(cell04Text);
+
+       var cell004 = document.createElement("td");
+       var cell004Text = document.createTextNode(doc.data()["LN"]);
+       cell004.appendChild(cell004Text);
+
+       var cell4 = document.createElement("td");
+       var cell4Text = document.createTextNode(getAge(doc.data()["DN"]));
+       cell4.appendChild(cell4Text);
+       var cell05 = document.createElement("td");
+       var cell05Text = document.createTextNode(doc.data()["Club"]);
+       cell05.appendChild(cell05Text);
+     
+       var cell5 = document.createElement("td");
+       var cell5Text = document.createTextNode(doc.data()["Fonction"]);
+       cell5.appendChild(cell5Text);
+     
+       
+    
+     
+      
+       row.appendChild(cell1);
+       row.appendChild(cell2);
+       row.appendChild(cell3);
+       row.appendChild(cell04);
+       row.appendChild(cell004);
+       row.appendChild(cell4);
+       row.appendChild(cell05);
+       row.appendChild(cell5);
+     
+     
+       tBody.appendChild(row);
+         
+       
+       }, error => {
+         console.log(error.message);
+       }
+       );
+//--------------------------table modifier-----------------------------//
+querySnapshot.forEach(doc => {
+  var testRowIndex = clubnames.push([doc.data()["ID"],doc.data()["Nom"],doc.data()["Prenom"],doc.data()["DN"],doc.data()["LN"],doc.data()["Club"],doc.data()["Fonction"]]) -1 ;
+      
+ var row = document.createElement("tr");
+
+ var cell1 = document.createElement("td");
+       var cell1Text = document.createTextNode(doc.data()["ID"]);
+       cell1.appendChild(cell1Text);
+     
+       var cell2 = document.createElement("td");
+       var cell2Text = document.createTextNode(doc.data()["Nom"]);
+       cell2.appendChild(cell2Text);
+     
+       var cell3 = document.createElement("td");
+       var cell3Text = document.createTextNode(doc.data()["Prenom"]);
+       cell3.appendChild(cell3Text);
+     
+       var cell04 = document.createElement("td");
+       var cell04Text = document.createTextNode(doc.data()["DN"]);
+       cell04.appendChild(cell04Text);
+
+       var cell004 = document.createElement("td");
+       var cell004Text = document.createTextNode(doc.data()["LN"]);
+       cell004.appendChild(cell004Text);
+
+       var cell4 = document.createElement("td");
+       var cell4Text = document.createTextNode(getAge(doc.data()["DN"]));
+       cell4.appendChild(cell4Text);
+       var cell05 = document.createElement("td");
+       var cell05Text = document.createTextNode(doc.data()["Club"]);
+       cell05.appendChild(cell05Text);
+     
+       var cell5 = document.createElement("td");
+       var cell5Text = document.createTextNode(doc.data()["Fonction"]);
+       cell5.appendChild(cell5Text);
+     
+       
+    
+     
+      
+       row.appendChild(cell1);
+       row.appendChild(cell2);
+       row.appendChild(cell3);
+       row.appendChild(cell04);
+       row.appendChild(cell004);
+       row.appendChild(cell4);
+       row.appendChild(cell05);
+       row.appendChild(cell5);
+ var update = document.createElement("button");
+ update.innerHTML = "Modifier";
+ update.onclick = function(){
+   Gett(testRowIndex,doc.id);
+   
+ };
+ update.setAttribute("data-toggle", "modal");
+ update.setAttribute("type", "button");
+ update.setAttribute("data-target","#exampleModalCenter");
+ update.setAttribute("class","btn btn-primary btn-lg active btn-sm btn-rounded my-2 mx-2");
+
+ row.appendChild(update);
+
+
+
+   tBody2.appendChild(row);
+   
+ 
+ }, error => {
+   console.log(error.message);
+ }
+ );
+
+
+//----------------------filling modal--------------//
+
+function Gett(index,id) {
+
+// doc.data() is never undefined for query doc snapshots
+idd.value =clubnames[index][0];
+nom.value = clubnames[index][1];
+prenom.value = clubnames[index][2];
+date.value =clubnames[index][3];
+lieu.value =clubnames[index][4];
+club.value =clubnames[index][5];
+fonction.value = clubnames[index][6];
+
+cle.value=id;
+
+
+}
+//----------------------Update fuction---------------------//
+
+
+async function update() {
+  var i = cle.value;
+const washingtonRef = doc(db, "Entraineur", i);
+
+
+await updateDoc(washingtonRef, {
+          "ID":idd.value,
+           "DN" : date.value,
+           "Club": club.value,
+           "Nom": nom.value,
+           "Prenom":prenom.value,
+           "LN": lieu.value,
+           "Fonction": fonction.value
+
+}).then(()=>{
+             alert("Mise à jour effectuée avec succès");
+             location.reload(true);
+         })
+         .catch((error)=>{
+             alert("Mise à jour échouée !"+error);
+         });
+
+}
+//-------------------delete function---------------------//
+async function del() {
+ var i = cle.value;
+ console.log(i);
+var res = confirm('Êtes-vous sûr de vouloir supprimer ce joueur ?');
+if (res==true) {
+ var ref = doc(db, "Entraineur", i);
+await  deleteDoc(ref).then(()=>{
+             alert("Suppression avec succès !");
+             location.reload(true);
+         })
+         .catch((error)=>{
+             alert("La suppression a échouée !"+error);
+         });
+ location.reload(true);
+ 
+} else {
+ event.preventDefault();
+}
+}
+//-------------------Add function----------------//
+async function Add() {
+   var ref = collection(db, "Entraineur");
+   if (clubj.value == "Choisi" ||nomj.value==""||prenomj.value=="" ) {
+     alert("Nom, prénom et club du joueur sont obligatoires !")
+   }else{ 
+     const docRef = await addDoc(
+       ref,{
+           "DN" : datej.value,
+           "LN" : lieuj.value,
+           "Club": clubj.value,
+           "Nom": nomj.value,
+           "Fonction": foncj.value ,
+           "ID": idj.value,
+           "Prenom":prenomj.value,
+       }
+   ).then(()=>{
+       alert(`${nomj.value} ${prenomj.value} a été ajouté avec succès !`);
+       idj.value = "";
+       nomj.value = "";
+       prenomj.value="";
+   })
+   .catch((error)=>{
+       alert("Joueur n'a pas pu être ajouté !"+error);
+   });}
+  
+}
+
+const rows = document.querySelectorAll('tbody tr');
+
+search.addEventListener("keyup", function (event) {
+  const q = event.target.value.toLowerCase();
+  rows.forEach((row) => {
+    if (searchbox.value == "Nom") {
+          row.querySelectorAll("td")[1].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchbox.value == "Prenom") {
+          row.querySelectorAll("td")[2].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchbox.value == "Fonction") {
+          row.querySelectorAll("td")[7].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchbox.value == "Club") {
+          row.querySelectorAll("td")[6].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+
+
+  })
+})
+searchx.addEventListener("keyup", function (event) {
+  const q = event.target.value.toLowerCase();
+  rows.forEach((row) => {
+    if (searchboxx.value == "Nom") {
+          row.querySelectorAll("td")[1].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchboxx.value == "Prenom") {
+          row.querySelectorAll("td")[2].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchboxx.value == "Club") {
+          row.querySelectorAll("td")[6].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+    if (searchboxx.value == "Fonction") {
+          row.querySelectorAll("td")[7].textContent.toLowerCase().startsWith(q)
+    ?(row.style.display = "")
+    : (row.style.display = "none");
+    }
+
+
+  })
+})
+
+insert.addEventListener("click",Add);
+save.addEventListener("click",update);
+drop.addEventListener("click",del);
+
+
+
+
+
+</script>
+  </body>
+</html>
